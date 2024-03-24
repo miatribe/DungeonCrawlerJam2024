@@ -28,13 +28,15 @@ func _ready() -> void:
 
 
 func _on_action_1_pressed() -> void:
-	if partyMember.action_1:
+	if partyMember.action_1 && action_1_cooldown.is_stopped():
 		actionPressed(partyMember.action_1)
+		action_1_cooldown.start()
 
 
 func _on_action_2_pressed() -> void:
-	if partyMember.action_2:
+	if partyMember.action_2 && action_2_cooldown.is_stopped():
 		actionPressed(partyMember.action_2)
+		action_2_cooldown.start()
 
 
 func actionPressed(action:Action) -> void:

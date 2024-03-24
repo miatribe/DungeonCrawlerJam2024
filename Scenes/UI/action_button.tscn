@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://q1b454wf423a"]
+
+[ext_resource type="Texture2D" uid="uid://cp0e1on4vk0kn" path="res://Assets/two-handed-sword.png" id="1_f8jio"]
+[ext_resource type="Script" path="res://Scenes/UI/action_button.gd" id="2_pl1ag"]
+
+[node name="ActionButton" type="TextureButton"]
+texture_normal = ExtResource("1_f8jio")
+script = ExtResource("2_pl1ag")
+
+[node name="Sweep" type="TextureProgressBar" parent="."]
+modulate = Color(0.145098, 0.145098, 0.145098, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+fill_mode = 5
+
+[node name="Timer" type="Timer" parent="Sweep"]
+one_shot = true
+
+[node name="Coutner" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Value" type="Label" parent="Coutner"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
+text = "20.00"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="timeout" from="Sweep/Timer" to="." method="_on_timer_timeout"]
