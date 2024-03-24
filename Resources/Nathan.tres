@@ -1,14 +1,17 @@
-[gd_resource type="Resource" script_class="PartyMember" load_steps=6 format=3 uid="uid://cmx2r5eumtf1n"]
+[gd_resource type="Resource" script_class="PartyMember" load_steps=8 format=3 uid="uid://cmx2r5eumtf1n"]
 
+[ext_resource type="Texture2D" uid="uid://bdm8vyi45tuhh" path="res://Assets/power-lightning.png" id="1_idpx1"]
 [ext_resource type="Script" path="res://Scripts/action.gd" id="1_m84hy"]
 [ext_resource type="Texture2D" uid="uid://bxgtee5jfuhwb" path="res://Assets/NathanFace.png" id="2_q3wej"]
 [ext_resource type="Script" path="res://Scripts/party_member.gd" id="3_8lpft"]
+[ext_resource type="Texture2D" uid="uid://cmgm8r2l38t4p" path="res://Assets/healing.png" id="3_yvl5l"]
 
 [sub_resource type="Resource" id="Resource_jjakt"]
 script = ExtResource("1_m84hy")
 actionName = "Zap"
 action_type = 0
 cooldownTime = 20.0
+icon = ExtResource("1_idpx1")
 cellRange = 5
 damage = 10
 targetMemberIndex = 0
@@ -19,6 +22,7 @@ script = ExtResource("1_m84hy")
 actionName = "Heal"
 action_type = 2
 cooldownTime = 30.0
+icon = ExtResource("3_yvl5l")
 cellRange = 0
 damage = 0
 targetMemberIndex = 0

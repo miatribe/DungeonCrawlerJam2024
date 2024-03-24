@@ -4,13 +4,15 @@ extends TextureButton
 @onready var value: Label = $Coutner/Value
 @onready var sweep: TextureProgressBar = $Sweep
 
-var action:Action
-
+var action:Action:
+	set(new_action):
+		action = new_action
+		texture_normal = action.icon
+		timer.wait_time = action.cooldownTime
+		sweep.texture_progress = texture_normal
 
 func _ready() -> void:
-	timer.wait_time = action.cooldownTime
 	value.hide()
-	sweep.texture_progress = texture_normal
 	sweep.value = 0
 	set_process(false)
 

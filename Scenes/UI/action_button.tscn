@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/UI/action_button.gd" id="2_pl1ag"]
 
 [node name="ActionButton" type="TextureButton"]
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("1_f8jio")
 script = ExtResource("2_pl1ag")
 

@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="PartyMember" load_steps=6 format=3 uid="uid://yfw83ir1npr1"]
+[gd_resource type="Resource" script_class="PartyMember" load_steps=8 format=3 uid="uid://yfw83ir1npr1"]
 
 [ext_resource type="Script" path="res://Scripts/action.gd" id="1_c55g0"]
+[ext_resource type="Texture2D" uid="uid://yguhvdvr66oo" path="res://Assets/high-shot.png" id="1_lbtyb"]
 [ext_resource type="Texture2D" uid="uid://cqppeccmupdj7" path="res://Assets/PrestonFace.png" id="2_m6mip"]
+[ext_resource type="Texture2D" uid="uid://bm2lc6tlq47hb" path="res://Assets/click.png" id="3_hbdgq"]
 [ext_resource type="Script" path="res://Scripts/party_member.gd" id="3_xbaa7"]
 
 [sub_resource type="Resource" id="Resource_il6ip"]
@@ -9,6 +11,7 @@ script = ExtResource("1_c55g0")
 actionName = "Shoot"
 action_type = 0
 cooldownTime = 10.0
+icon = ExtResource("1_lbtyb")
 cellRange = 4
 damage = 5
 targetMemberIndex = 0
@@ -19,6 +22,7 @@ script = ExtResource("1_c55g0")
 actionName = "Interact"
 action_type = 1
 cooldownTime = 1.0
+icon = ExtResource("3_hbdgq")
 cellRange = 0
 damage = 0
 targetMemberIndex = 0
