@@ -1,0 +1,15 @@
+[gd_scene load_steps=6 format=3 uid="uid://bumt3b3xb68p"]
+
+[ext_resource type="Script" path="res://Scripts/party_member_list.gd" id="1_r1j2c"]
+[ext_resource type="PackedScene" uid="uid://dynkjvsk5o81l" path="res://Scenes/UI/party_member_panel.tscn" id="2_3toko"]
+[ext_resource type="Resource" uid="uid://dfixx1nmx5dqa" path="res://Resources/Michael.tres" id="3_t246g"]
+[ext_resource type="Resource" uid="uid://yfw83ir1npr1" path="res://Resources/Preston.tres" id="4_fxegg"]
+[ext_resource type="Resource" uid="uid://cmx2r5eumtf1n" path="res://Resources/Nathan.tres" id="5_5jmx3"]
+
+[node name="PartyMemberList" type="HBoxContainer"]
+offset_right = 960.0
+theme_override_constants/separation = 20
+alignment = 1
+script = ExtResource("1_r1j2c")
+PartyMemberPanel = ExtResource("2_3toko")
+PartyMembers = Array[Resource("res://Scripts/party_member.gd")]([ExtResource("3_t246g"), ExtResource("4_fxegg"), ExtResource("5_5jmx3")])

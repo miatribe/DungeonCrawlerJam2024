@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="PartyMember" load_steps=6 format=3 uid="uid://dfixx1nmx5dqa"]
+
+[ext_resource type="Script" path="res://Scripts/action.gd" id="1_lxq30"]
+[ext_resource type="Texture2D" uid="uid://ch5vt2ibuhik2" path="res://Assets/MichaelFace.png" id="2_rxfhd"]
+[ext_resource type="Script" path="res://Scripts/party_member.gd" id="3_kvmi5"]
+
+[sub_resource type="Resource" id="Resource_0yl5w"]
+script = ExtResource("1_lxq30")
+actionName = "Stab!"
+action_type = 0
+cooldownTime = 10.0
+cellRange = 1
+damage = 10
+targetMemberIndex = 0
+healAmount = 0
+
+[sub_resource type="Resource" id="Resource_ipsj6"]
+script = ExtResource("1_lxq30")
+actionName = "Bandage"
+action_type = 2
+cooldownTime = 20.0
+cellRange = 0
+damage = 0
+targetMemberIndex = -1
+healAmount = 10
+
+[resource]
+script = ExtResource("3_kvmi5")
+name = "Michael"
+image = ExtResource("2_rxfhd")
+maxHealth = 80
+currentHealth = 50
+action_1 = SubResource("Resource_0yl5w")
+action_2 = SubResource("Resource_ipsj6")
