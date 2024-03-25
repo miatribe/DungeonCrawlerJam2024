@@ -11,6 +11,7 @@ var action:Action:
 		timer.wait_time = action.cooldownTime
 		sweep.texture_progress = texture_normal
 
+
 func _ready() -> void:
 	value.hide()
 	sweep.value = 0

@@ -2,21 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjrsecncdm1ch"
-path="res://.godot/imported/BasicSetNoUV_ruinsAtlas.png-1d490d0789b127e4199c79a908a47fad.ctex"
+uid="uid://pu5synb8uihs"
+path.s3tc="res://.godot/imported/Lever_Left_Atlas.png-5e55fb3982f80de2622ab2e04d7a3cc1.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={}
 
 [deps]
 
-source_file="res://Assets/BasicSetNoUV_ruinsAtlas.png"
-dest_files=["res://.godot/imported/BasicSetNoUV_ruinsAtlas.png-1d490d0789b127e4199c79a908a47fad.ctex"]
+source_file="res://Assets/Lever_Left_Atlas.png"
+dest_files=["res://.godot/imported/Lever_Left_Atlas.png-5e55fb3982f80de2622ab2e04d7a3cc1.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

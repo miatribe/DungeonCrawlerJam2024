@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhuv7uh2fxq04"]
+[gd_scene load_steps=10 format=3 uid="uid://dhuv7uh2fxq04"]
 
 [ext_resource type="PackedScene" uid="uid://coeceae30b66w" path="res://Scenes/Player/crawler.tscn" id="1_n0ayk"]
 [ext_resource type="MeshLibrary" uid="uid://dv5hv4ntgals7" path="res://Resources/tileset.tres" id="2_b71bb"]
 [ext_resource type="PackedScene" uid="uid://bumt3b3xb68p" path="res://Scenes/UI/party_member_list.tscn" id="3_1ch0v"]
+[ext_resource type="PackedScene" uid="uid://br2y6a7bjmadj" path="res://Assets/Statue_Fox.glb" id="4_lcwm8"]
+[ext_resource type="PackedScene" uid="uid://bcmyxxhlnsiif" path="res://Assets/Column_Round.glb" id="5_kadht"]
+[ext_resource type="PackedScene" uid="uid://ijcgunsrlnfg" path="res://Scenes/lever.tscn" id="6_1d1hw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6mi60"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -66,3 +69,26 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 6
 size_flags_vertical = 4
+
+[node name="Props" type="Node" parent="."]
+
+[node name="Statue_Fox2" parent="Props" instance=ExtResource("4_lcwm8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.0351, 0.977273, 6.97493)
+
+[node name="Column_Round2" parent="Props" instance=ExtResource("5_kadht")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -15.0112, 0.993133, 10.9168)
+
+[node name="Column_Round3" parent="Props" instance=ExtResource("5_kadht")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -15.0112, 0.993133, 2.89314)
+
+[node name="Column_Round4" parent="Props" instance=ExtResource("5_kadht")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -8.87136, 0.993133, 3.01446)
+
+[node name="Column_Round5" parent="Props" instance=ExtResource("5_kadht")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -9.06081, 0.993133, 11.0171)
+
+[node name="Lever_Left2" parent="." instance=ExtResource("6_1d1hw")]
+transform = Transform3D(-1.31134e-08, -1.31134e-08, -0.3, -0.3, -1.31134e-08, 1.31134e-08, -1.31134e-08, 0.3, -1.31134e-08, -4.96784, 2.28808, -4)
+
+[connection signal="AttackMade" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="attack"]
+[connection signal="Interact" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="interact"]

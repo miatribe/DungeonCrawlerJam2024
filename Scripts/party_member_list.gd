@@ -3,7 +3,7 @@ extends HBoxContainer
 @export var PartyMemberPanel: PackedScene
 @export var PartyMembers: Array[PartyMember]
 
-signal AttackMade(range,damage)
+signal AttackMade(range:int,damage:int)
 signal Interact()
 
 func _ready() -> void:
@@ -15,7 +15,6 @@ func _ready() -> void:
 
 
 func on_party_member_action(action:Action) -> void:
-	print("action!")
 	match action.action_type:
 		Action.actionType.attack:
 			AttackMade.emit(action.cellRange,action.damage)
