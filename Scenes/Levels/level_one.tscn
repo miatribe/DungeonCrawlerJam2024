@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhuv7uh2fxq04"]
+[gd_scene load_steps=11 format=3 uid="uid://dhuv7uh2fxq04"]
 
 [ext_resource type="PackedScene" uid="uid://coeceae30b66w" path="res://Scenes/Player/crawler.tscn" id="1_n0ayk"]
 [ext_resource type="MeshLibrary" uid="uid://dv5hv4ntgals7" path="res://Resources/tileset.tres" id="2_b71bb"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://br2y6a7bjmadj" path="res://Assets/Statue_Fox.glb" id="4_lcwm8"]
 [ext_resource type="PackedScene" uid="uid://bcmyxxhlnsiif" path="res://Assets/Column_Round.glb" id="5_kadht"]
 [ext_resource type="PackedScene" uid="uid://ijcgunsrlnfg" path="res://Scenes/lever.tscn" id="6_1d1hw"]
+[ext_resource type="PackedScene" uid="uid://dobk40b4hkl50" path="res://wall.tscn" id="7_ji2io"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6mi60"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -87,8 +88,12 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -8.87136, 0.993133, 3.0
 [node name="Column_Round5" parent="Props" instance=ExtResource("5_kadht")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -9.06081, 0.993133, 11.0171)
 
-[node name="Lever_Left2" parent="." instance=ExtResource("6_1d1hw")]
+[node name="Lever_Left2" parent="." node_paths=PackedStringArray("door") instance=ExtResource("6_1d1hw")]
 transform = Transform3D(-1.31134e-08, -1.31134e-08, -0.3, -0.3, -1.31134e-08, 1.31134e-08, -1.31134e-08, 0.3, -1.31134e-08, -4.96784, 2.28808, -4)
+door = NodePath("../WallOnly2")
+
+[node name="WallOnly2" parent="." instance=ExtResource("7_ji2io")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1, 1)
 
 [connection signal="AttackMade" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="attack"]
 [connection signal="Interact" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="interact"]
