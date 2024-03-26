@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://q1b454wf423a"]
 
 [ext_resource type="Texture2D" uid="uid://cp0e1on4vk0kn" path="res://Assets/two-handed-sword.png" id="1_f8jio"]
-[ext_resource type="Script" path="res://Scenes/UI/action_button.gd" id="2_pl1ag"]
+[ext_resource type="Script" path="res://Scripts/action_button.gd" id="2_pl1ag"]
 
 [node name="ActionButton" type="TextureButton"]
 mouse_default_cursor_shape = 2

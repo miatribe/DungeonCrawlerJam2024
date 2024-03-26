@@ -15,15 +15,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="RayFoward" type="RayCast3D" parent="MidPointMarker"]
 target_position = Vector3(0, 0, -2)
+collision_mask = 3
+collide_with_areas = true
 
 [node name="RayBackward" type="RayCast3D" parent="MidPointMarker"]
 target_position = Vector3(0, 0, 2)
+collision_mask = 3
+collide_with_areas = true
 
 [node name="RayLeft" type="RayCast3D" parent="MidPointMarker"]
 target_position = Vector3(-2, 0, 0)
+collision_mask = 3
+collide_with_areas = true
 
 [node name="RayRight" type="RayCast3D" parent="MidPointMarker"]
 target_position = Vector3(2, 0, 0)
+collision_mask = 3
+collide_with_areas = true
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="MidPointMarker"]
 shape = SubResource("BoxShape3D_mbhr5")
@@ -32,7 +40,7 @@ collision_mask = 7
 collide_with_areas = true
 
 [node name="CameraMarker" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraMarker"]
 current = true

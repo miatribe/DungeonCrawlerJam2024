@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ijcgunsrlnfg"]
 
 [ext_resource type="PackedScene" uid="uid://dtkn7qe5v7kvk" path="res://Assets/Lever_Left.gltf" id="1_ty64o"]
-[ext_resource type="Script" path="res://Scenes/lever.gd" id="2_yisov"]
+[ext_resource type="Script" path="res://Scripts/lever.gd" id="2_yisov"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x5s1b"]
 size = Vector3(5.54041, 1.93506, 4.23035)

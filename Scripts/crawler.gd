@@ -32,8 +32,11 @@ func _input(event: InputEvent) -> void:
 
 
 func attack(cellRange:int,damage:int) -> void:
-	print("player attracking")
-	get_interacable_object(cellRange,2)
+	var collider = get_interacable_object(cellRange,2)
+	if collider:
+		var colliderParent = collider.get_parent()
+		if colliderParent.has_method("take_damage"):
+			collider.get_parent().take_damage(damage)
 
 
 func interact() -> void:
@@ -45,9 +48,11 @@ func interact() -> void:
 
 
 func get_interacable_object(cellRange:int,collisionMask:int) -> Node:
-	shape_cast_3d.target_position = (transform.basis * Vector3.FORWARD) * cellRange
+	shape_cast_3d.target_position = Vector3.FORWARD * cellRange
+	print(shape_cast_3d.target_position)
 	shape_cast_3d.force_shapecast_update()
 	if shape_cast_3d.is_colliding():
+		print(shape_cast_3d.get_collider(0).get_collision_layer())
 		if shape_cast_3d.get_collider(0).get_collision_layer()  == collisionMask:
 			return shape_cast_3d.get_collider(0)
 	return null

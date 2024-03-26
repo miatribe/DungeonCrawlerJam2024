@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dhuv7uh2fxq04"]
+[gd_scene load_steps=14 format=3 uid="uid://dhuv7uh2fxq04"]
 
 [ext_resource type="PackedScene" uid="uid://coeceae30b66w" path="res://Scenes/Player/crawler.tscn" id="1_n0ayk"]
 [ext_resource type="MeshLibrary" uid="uid://dv5hv4ntgals7" path="res://Resources/tileset.tres" id="2_b71bb"]
@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://br2y6a7bjmadj" path="res://Assets/Statue_Fox.glb" id="4_lcwm8"]
 [ext_resource type="PackedScene" uid="uid://bcmyxxhlnsiif" path="res://Assets/Column_Round.glb" id="5_kadht"]
 [ext_resource type="PackedScene" uid="uid://ijcgunsrlnfg" path="res://Scenes/lever.tscn" id="6_1d1hw"]
-[ext_resource type="PackedScene" uid="uid://dobk40b4hkl50" path="res://wall.tscn" id="7_ji2io"]
+[ext_resource type="PackedScene" uid="uid://dobk40b4hkl50" path="res://Scenes/wall.tscn" id="7_ji2io"]
+[ext_resource type="PackedScene" uid="uid://2q7r4tgcamha" path="res://Scenes/skeleton.tscn" id="9_jpaxb"]
+
+[sub_resource type="GDScript" id="GDScript_u06k3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6mi60"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -25,19 +28,18 @@ glow_enabled = true
 fog_enabled = true
 fog_light_color = Color(0.894118, 0.592157, 0.360784, 1)
 fog_light_energy = 0.02
-fog_density = 0.1
+fog_density = 0.3954
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_pr8ne"]
+vertices = PackedVector3Array(-0.25, 1.5, -2.75, 3.25, 1.5, -2.75, 3.25, 1.5, -3.25, -1.25, 1.5, -3.25, -16.75, 1.5, -1.25, -17.75, 1.5, -0.75, -17.25, 1.5, -0.25, -0.75, 1.5, -2.25, -0.25, 1.5, -2.75, -1.25, 1.5, -3.25, -0.75, 1.5, -2.25, -1.25, 1.5, -3.25, -1.25, 1.5, 0.25, -0.75, 1.5, 0.25, -8.25, 1.5, 6.75, -8.75, 1.5, 2.75, -16.25, 1.5, 2.75, -17.25, 1.5, 11.25, -8.5, 1.5, 11.25, -8.25, 1.5, 7.5, -0.25, 1.5, 0.75, -0.75, 1.5, 0.25, -1.25, 1.5, 0.25, -1.75, 1.5, 0.75, -22.25, 1.5, -1.25, -22.75, 1.5, -1.75, -23.25, 1.5, -0.5, -4.25, 1.5, 0.75, -4.75, 1.5, -3.25, -5.25, 1.5, -3.25, -5.25, 1.5, 1.5, -16.75, 1.5, 2.25, -16.75, 1.5, -1.25, -17.25, 1.5, -0.25, -17.25, 1.5, 11.25, -1.75, 1.5, 0.75, -4.25, 1.5, 0.75, -5.25, 1.5, 1.5, -1.75, 1.5, 0.75, -5.25, 1.5, 1.5, 2.75, 1.5, 1.75, -0.25, 1.5, 0.75, -22.25, 1.5, -1.25, -23.25, 1.5, -0.5, -17.75, 1.5, -0.75, -16.75, 1.5, -1.25, 3.25, 1.5, 0.75, -0.25, 1.5, 0.75, 2.75, 1.5, 1.75, 3.25, 1.5, 0.75, 2.75, 1.5, 1.75, 2.75, 1.5, 6.25, 3.5, 1.5, 7.25, -8.25, 1.5, 7.5, 3.5, 1.5, 7.25, 2.25, 1.5, 6.75, -8.25, 1.5, 6.75, 3.5, 1.5, 7.25, 2.75, 1.5, 6.25, 2.25, 1.5, 6.75, -22.75, 1.5, -1.75, -22.75, 1.5, -7.25, -23.25, 1.5, -7.25, -23.25, 1.5, -0.5, -16.25, 1.5, 2.75, -16.75, 1.5, 2.25, -17.25, 1.5, 11.25)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(6, 5, 4), PackedInt32Array(9, 8, 7), PackedInt32Array(13, 12, 10), PackedInt32Array(10, 12, 11), PackedInt32Array(19, 18, 14), PackedInt32Array(14, 18, 15), PackedInt32Array(15, 18, 16), PackedInt32Array(16, 18, 17), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(26, 25, 24), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 30), PackedInt32Array(32, 31, 33), PackedInt32Array(33, 31, 34), PackedInt32Array(37, 36, 35), PackedInt32Array(41, 40, 38), PackedInt32Array(38, 40, 39), PackedInt32Array(45, 44, 42), PackedInt32Array(42, 44, 43), PackedInt32Array(48, 47, 46), PackedInt32Array(50, 49, 51), PackedInt32Array(51, 49, 52), PackedInt32Array(56, 55, 53), PackedInt32Array(53, 55, 54), PackedInt32Array(59, 58, 57), PackedInt32Array(61, 60, 62), PackedInt32Array(62, 60, 63), PackedInt32Array(66, 65, 64)]
+agent_radius = 0.4
 
 [node name="LevelOne" type="Node"]
+script = SubResource("GDScript_u06k3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kbjqk")
-
-[node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("2_b71bb")
-data = {
-"cells": PackedInt32Array(1, 65534, 0, 0, 65534, 2, 65535, 65534, 1048580, 65535, 65535, 1048578, 65535, 0, 655363, 65534, 0, 655362, 0, 0, 655362, 65533, 0, 655364, 1, 0, 4, 65533, 65535, 1441794, 65533, 65534, 1048576, 1, 1, 1048578, 1, 2, 1048578, 1, 3, 1441796, 0, 3, 655362, 65535, 3, 655362, 65534, 3, 655362, 65533, 3, 655362, 65532, 3, 655362, 65531, 3, 655365, 65530, 3, 655365, 65529, 3, 655365, 65528, 3, 655365, 65530, 4, 655365, 65530, 2, 655365, 65529, 2, 655365, 65528, 2, 655365, 65528, 4, 655365, 65529, 4, 655365, 131066, 1, 8, 131065, 1, 8, 131064, 1, 8, 131067, 3, 1441800, 131067, 2, 1441800, 131067, 4, 1441800, 131066, 5, 655368, 131065, 5, 655368, 131064, 5, 655368, 131063, 4, 1048584, 131063, 3, 1048584, 131063, 2, 1048584, 131063, 1, 1048585, 131067, 1, 9, 131067, 5, 1441801, 131063, 5, 655369, 196599, 1, 1048586, 196603, 1, 10, 196603, 5, 1441802, 196599, 5, 655370, 196599, 4, 1048583, 196599, 3, 1048583, 196599, 2, 1048583, 196600, 1, 7, 196601, 1, 7, 196602, 1, 7, 196603, 2, 1441799, 196603, 3, 1441799, 196603, 4, 1441799, 196602, 5, 655367, 196601, 5, 655367, 196600, 5, 655367, 196602, 4, 655366, 196602, 3, 655366, 196602, 2, 655366, 196601, 2, 655366, 196601, 4, 655366, 196600, 4, 655366, 196600, 3, 655366, 196600, 2, 655366, 196601, 3, 655366, 65527, 5, 655372, 65531, 1, 12, 65531, 5, 1441804, 65531, 4, 1441803, 65531, 2, 1441803, 65530, 1, 11, 65529, 1, 11, 65528, 1, 11, 65530, 5, 655371, 65529, 5, 655371, 65528, 5, 655371, 65527, 4, 1048587, 65527, 3, 1048587, 65527, 2, 1048587, 65527, 1, 1048587, 65527, 0, 1048578, 65527, 65535, 4, 65526, 65535, 2, 65525, 65535, 2, 65524, 65535, 655364, 65524, 65534, 1048578, 65524, 65533, 1441794, 65524, 65532, 1048576)
-}
-metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="PixelateViewport" type="SubViewportContainer" parent="."]
 anchors_preset = 15
@@ -94,6 +96,19 @@ door = NodePath("../WallOnly2")
 
 [node name="WallOnly2" parent="." instance=ExtResource("7_ji2io")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1, 1)
+
+[node name="Skeleton" parent="." instance=ExtResource("9_jpaxb")]
+transform = Transform3D(-1.2, 0, -1.81195e-07, 0, 1.2, 0, 1.81195e-07, 0, -1.2, 3, 1, 5)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_pr8ne")
+
+[node name="GridMap" type="GridMap" parent="NavigationRegion3D"]
+mesh_library = ExtResource("2_b71bb")
+data = {
+"cells": PackedInt32Array(1, 65534, 0, 0, 65534, 2, 65535, 65534, 1048580, 65535, 65535, 1048578, 65535, 0, 655363, 65534, 0, 655362, 0, 0, 655362, 65533, 0, 655364, 1, 0, 4, 65533, 65535, 1441794, 65533, 65534, 1048576, 1, 1, 1048578, 1, 2, 1048578, 1, 3, 1441796, 0, 3, 655362, 65535, 3, 655362, 65534, 3, 655362, 65533, 3, 655362, 65532, 3, 655362, 65531, 3, 655365, 65530, 3, 655365, 65529, 3, 655365, 65528, 3, 655365, 65530, 4, 655365, 65530, 2, 655365, 65529, 2, 655365, 65528, 2, 655365, 65528, 4, 655365, 65529, 4, 655365, 131066, 1, 8, 131065, 1, 8, 131064, 1, 8, 131067, 3, 1441800, 131067, 2, 1441800, 131067, 4, 1441800, 131066, 5, 655368, 131065, 5, 655368, 131064, 5, 655368, 131063, 4, 1048584, 131063, 3, 1048584, 131063, 2, 1048584, 131063, 1, 1048585, 131067, 1, 9, 131067, 5, 1441801, 131063, 5, 655369, 196599, 1, 1048586, 196603, 1, 10, 196603, 5, 1441802, 196599, 5, 655370, 196599, 4, 1048583, 196599, 3, 1048583, 196599, 2, 1048583, 196600, 1, 7, 196601, 1, 7, 196602, 1, 7, 196603, 2, 1441799, 196603, 3, 1441799, 196603, 4, 1441799, 196602, 5, 655367, 196601, 5, 655367, 196600, 5, 655367, 196602, 4, 655366, 196602, 3, 655366, 196602, 2, 655366, 196601, 2, 655366, 196601, 4, 655366, 196600, 4, 655366, 196600, 3, 655366, 196600, 2, 655366, 196601, 3, 655366, 65527, 5, 655372, 65531, 1, 12, 65531, 5, 1441804, 65531, 4, 1441803, 65531, 2, 1441803, 65530, 1, 11, 65529, 1, 11, 65528, 1, 11, 65530, 5, 655371, 65529, 5, 655371, 65528, 5, 655371, 65527, 4, 1048587, 65527, 3, 1048587, 65527, 2, 1048587, 65527, 1, 1048587, 65527, 0, 1048578, 65527, 65535, 4, 65526, 65535, 2, 65525, 65535, 2, 65524, 65535, 655364, 65524, 65534, 1048578, 65524, 65533, 1441794, 65524, 65532, 1048576)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [connection signal="AttackMade" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="attack"]
 [connection signal="Interact" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="interact"]
