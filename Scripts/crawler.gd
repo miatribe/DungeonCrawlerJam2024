@@ -1,6 +1,8 @@
 extends Node3D
 class_name Crawler
 
+signal damage_recevied(damage:int)
+
 @onready var ray_foward: RayCast3D = $MidPointMarker/RayFoward
 @onready var ray_backward: RayCast3D = $MidPointMarker/RayBackward
 @onready var ray_left: RayCast3D = $MidPointMarker/RayLeft
@@ -36,6 +38,7 @@ func attack(cellRange:int,damage:int) -> void:
 	if collider:
 		var colliderParent = collider.get_parent()
 		if colliderParent.has_method("take_damage"):
+			print(colliderParent)
 			collider.get_parent().take_damage(damage)
 
 
@@ -49,10 +52,8 @@ func interact() -> void:
 
 func get_interacable_object(cellRange:int,collisionMask:int) -> Node:
 	shape_cast_3d.target_position = Vector3.FORWARD * cellRange
-	print(shape_cast_3d.target_position)
 	shape_cast_3d.force_shapecast_update()
 	if shape_cast_3d.is_colliding():
-		print(shape_cast_3d.get_collider(0).get_collision_layer())
 		if shape_cast_3d.get_collider(0).get_collision_layer()  == collisionMask:
 			return shape_cast_3d.get_collider(0)
 	return null
