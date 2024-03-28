@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://csxpt1p66ouf1"]
+
+[ext_resource type="Script" path="res://Scripts/dialog_close_button.gd" id="1_cv50f"]
+
+[node name="DialogCloseButton" type="Button"]
+offset_right = 124.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 12
+text = "Close Dialog (Space)"
+script = ExtResource("1_cv50f")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(0.756863, 0.756863, 0.756863, 0.498039)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+value = 41.56
+fill_mode = 1
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="ProgressBar"]
+one_shot = true
