@@ -1,10 +1,13 @@
 extends HBoxContainer
 
-@export var PartyMemberPanel: PackedScene
-@export var PartyMembers: Array[PartyMember]
 
 signal AttackMade(range:int,damage:int)
 signal Interact()
+signal GameOver()
+
+@export var PartyMemberPanel: PackedScene
+@export var PartyMembers: Array[PartyMember]
+
 
 func _ready() -> void:
 	for pm in PartyMembers:
@@ -37,3 +40,5 @@ func on_damage_received(damage:int) -> void:
 			pmWithHighestHP = pm
 	print(pmWithHighestHP.name)
 	pmWithHighestHP.currentHealth -= damage
+	if pmWithHighestHP.currentHealth <= 0:
+		GameOver.emit()

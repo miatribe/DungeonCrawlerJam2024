@@ -1,6 +1,7 @@
 extends Resource
 class_name Action
 
+
 enum actionType{
 	attack,
 	interact,

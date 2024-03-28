@@ -1,7 +1,10 @@
 extends Node3D
 class_name Crawler
 
+
 signal damage_recevied(damage:int)
+
+@export var cell_size:int = 2
 
 @onready var ray_foward: RayCast3D = $MidPointMarker/RayFoward
 @onready var ray_backward: RayCast3D = $MidPointMarker/RayBackward
@@ -9,8 +12,6 @@ signal damage_recevied(damage:int)
 @onready var ray_right: RayCast3D = $MidPointMarker/RayRight
 @onready var input_delay: Timer = $InputDelay
 @onready var shape_cast_3d: ShapeCast3D = $MidPointMarker/ShapeCast3D
-
-@export var cell_size:int = 2
 
 
 func _input(event: InputEvent) -> void:

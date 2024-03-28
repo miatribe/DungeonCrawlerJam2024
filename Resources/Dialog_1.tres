@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://b8nb7j7u6hs7y"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_o27p4"]
+[ext_resource type="Resource" uid="uid://yfw83ir1npr1" path="res://Resources/Preston.tres" id="2_brsv6"]
+
+[resource]
+script = ExtResource("1_o27p4")
+speaker = ExtResource("2_brsv6")
+message = "Not sure if I can reach that lever..."
+autoCloseTime = 5.0

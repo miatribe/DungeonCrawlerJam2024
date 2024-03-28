@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://dwstgxxirfbud"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_ahnpj"]
+[ext_resource type="Resource" uid="uid://dfixx1nmx5dqa" path="res://Resources/Michael.tres" id="2_vwo5h"]
+
+[resource]
+script = ExtResource("1_ahnpj")
+speaker = ExtResource("2_vwo5h")
+message = "Lets find our way to the fox shrine and get this over with, this place gives me the creeps!"
+autoCloseTime = 10.0

@@ -1,8 +1,5 @@
 extends TextureButton
 
-@onready var timer: Timer = $Sweep/Timer
-@onready var value: Label = $Coutner/Value
-@onready var sweep: TextureProgressBar = $Sweep
 
 var action:Action:
 	set(new_action):
@@ -11,6 +8,10 @@ var action:Action:
 		timer.wait_time = action.cooldownTime
 		sweep.texture_progress = texture_normal
 
+@onready var timer: Timer = $Sweep/Timer
+@onready var value: Label = $Coutner/Value
+@onready var sweep: TextureProgressBar = $Sweep
+
 
 func _ready() -> void:
 	value.hide()
@@ -18,7 +19,7 @@ func _ready() -> void:
 	set_process(false)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	value.text = "%2.1f" % timer.time_left
 	sweep.value = (int)((timer.time_left / action.cooldownTime) * 100)
 

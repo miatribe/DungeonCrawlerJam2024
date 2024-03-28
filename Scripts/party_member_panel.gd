@@ -1,14 +1,15 @@
 extends PanelContainer
 
+
+signal ActionRaised(Action)
+
+var partyMember: PartyMember
+
 @onready var name_label: Label = $VBoxContainer/NameLabel
 @onready var member_icon: TextureRect = $VBoxContainer/HBoxContainer/MemberIcon
 @onready var health_bar: ProgressBar = $VBoxContainer/HealthBar
 @onready var action_1: TextureButton = $VBoxContainer/HBoxContainer/VBoxContainer/ActionButton
 @onready var action_2: TextureButton = $VBoxContainer/HBoxContainer/VBoxContainer/ActionButton2
-
-signal ActionRaised(Action)
-
-var partyMember: PartyMember
 
 
 func _ready() -> void:
