@@ -38,7 +38,6 @@ func on_damage_received(damage:int) -> void:
 		if pm.currentHealth == 0: continue
 		if healthMissing < pmWithHighestHP.maxHealth - pmWithHighestHP.currentHealth:
 			pmWithHighestHP = pm
-	print(pmWithHighestHP.name)
 	pmWithHighestHP.currentHealth -= damage
 	if pmWithHighestHP.currentHealth <= 0:
 		GameOver.emit()

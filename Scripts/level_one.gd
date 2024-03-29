@@ -23,3 +23,7 @@ func _on_dialog_1_trigger_triggered() -> void:
 func _on_lever_left_2_interacted() -> void:
 	$Props/WallOnly2.position.y = 3 #Grabbing the wall to open here
 	dialog_container.dialog = dialogs[2]
+
+
+func _on_dialog_2_trigger_triggered() -> void:
+	dialog_container.dialog = dialogs[3]

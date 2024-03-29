@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://dii0rkwuloskv"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/main_menu.gd" id="1_d1m7t"]
+[ext_resource type="MeshLibrary" uid="uid://dv5hv4ntgals7" path="res://Resources/tileset.tres" id="1_tagr4"]
+[ext_resource type="PackedScene" uid="uid://br2y6a7bjmadj" path="res://Assets/Statue_Fox.glb" id="2_a7ip0"]
+[ext_resource type="PackedScene" uid="uid://de40gxhg1uafi" path="res://Scenes/UI/non_web_button.tscn" id="3_83ugp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h54cv"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_4aogp"]
+sky_material = SubResource("ProceduralSkyMaterial_h54cv")
+
+[sub_resource type="Environment" id="Environment_juibj"]
+background_mode = 2
+sky = SubResource("Sky_4aogp")
+ambient_light_color = Color(0.894118, 0.592157, 0.360784, 1)
+ambient_light_energy = 0.37
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.894118, 0.592157, 0.360784, 1)
+fog_light_energy = 0.02
+fog_density = 0.3954
+
+[node name="MainMenu" type="Node3D"]
+script = ExtResource("1_d1m7t")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_tagr4")
+data = {
+"cells": PackedInt32Array(65535, 65535, 11, 0, 65535, 11, 65534, 65535, 11, 1, 0, 5, 0, 0, 5, 65535, 0, 5, 65534, 0, 5, 65536, 65535, 8, 131071, 65535, 8, 131070, 65535, 8, 196605, 65535, 8, 131074, 65535, 8, 65533, 65535, 11, 2, 65535, 11, 1, 65535, 11, 131069, 65535, 8, 65537, 65535, 8, 2, 0, 5, 65533, 0, 5, 196606, 65535, 8, 196607, 65535, 8, 131072, 65535, 8, 131073, 65535, 8, 65538, 65535, 8, 65532, 65535, 11, 65532, 0, 5, 131068, 65535, 8, 196604, 65535, 8)
+}
+metadata/_editor_floor_ = Vector3(0, 2, 0)
+
+[node name="Statue_Fox2" parent="." instance=ExtResource("2_a7ip0")]
+transform = Transform3D(0.925037, 0, -0.379876, 0, 1, 0, 0.379876, 0, 0.925037, -1.85159, 0, -0.511845)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.998702, -0.000554785, -0.0509385, -6.58049e-11, 0.999941, -0.0108906, 0.0509416, 0.0108765, 0.998642, -0.376091, 2.54919, 1.98431)
+fov = 81.2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Camera3D"]
+environment = SubResource("Environment_juibj")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(300, 300)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -108.0
+offset_right = 127.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Temple of the fox"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -33.0
+offset_right = 43.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="StartGameButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Play
+"
+
+[node name="NonWebButton" parent="Panel/VBoxContainer" instance=ExtResource("3_83ugp")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Exit Game
+"
+
+[connection signal="pressed" from="Panel/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/NonWebButton" to="." method="_on_non_web_button_pressed"]

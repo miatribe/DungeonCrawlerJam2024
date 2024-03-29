@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://bm1nskwjnnjti"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_5xtic"]
+[ext_resource type="Resource" uid="uid://cmx2r5eumtf1n" path="res://Resources/Nathan.tres" id="2_owsjd"]
+
+[resource]
+script = ExtResource("1_5xtic")
+speaker = ExtResource("2_owsjd")
+message = "A Skeleton! It has not seen us yet, we can get the jump on it."
+autoCloseTime = 8.0

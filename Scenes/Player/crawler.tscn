@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://coeceae30b66w"]
+[gd_scene load_steps=5 format=3 uid="uid://coeceae30b66w"]
 
 [ext_resource type="Script" path="res://Scripts/crawler.gd" id="1_powfg"]
 
@@ -7,6 +7,8 @@ size = Vector3(1.9, 1.9, 1.9)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nopgj"]
 size = Vector3(1.9, 1.9, 1.9)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gg70m"]
 
 [node name="Crawler" type="Node3D" groups=["player"]]
 script = ExtResource("1_powfg")
@@ -64,3 +66,11 @@ collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_nopgj")
+
+[node name="TriggerFront" type="Area3D" parent="."]
+collision_layer = 256
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03951, -2.11409)
+shape = SubResource("SphereShape3D_gg70m")

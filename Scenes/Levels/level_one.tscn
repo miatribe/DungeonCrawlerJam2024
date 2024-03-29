@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dhuv7uh2fxq04"]
+[gd_scene load_steps=22 format=3 uid="uid://dhuv7uh2fxq04"]
 
 [ext_resource type="PackedScene" uid="uid://coeceae30b66w" path="res://Scenes/Player/crawler.tscn" id="1_n0ayk"]
 [ext_resource type="Script" path="res://Scripts/level_one.gd" id="1_s76hs"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://b8nb7j7u6hs7y" path="res://Resources/Dialog_1.tres" id="3_wt4vn"]
 [ext_resource type="Resource" uid="uid://btqh6dmoq7k1e" path="res://Resources/Dialog_2.tres" id="4_8y141"]
 [ext_resource type="PackedScene" uid="uid://br2y6a7bjmadj" path="res://Assets/Statue_Fox.glb" id="4_lcwm8"]
+[ext_resource type="Resource" uid="uid://bm1nskwjnnjti" path="res://Resources/Dialog_3.tres" id="5_5g807"]
 [ext_resource type="PackedScene" uid="uid://bcmyxxhlnsiif" path="res://Assets/Column_Round.glb" id="5_kadht"]
 [ext_resource type="PackedScene" uid="uid://ijcgunsrlnfg" path="res://Scenes/Environment/lever.tscn" id="6_1d1hw"]
 [ext_resource type="PackedScene" uid="uid://dobk40b4hkl50" path="res://Scenes/Environment/wall.tscn" id="7_ji2io"]
@@ -21,12 +22,12 @@
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_4aogp"]
+[sub_resource type="Sky" id="Sky_og8a5"]
 sky_material = SubResource("ProceduralSkyMaterial_6mi60")
 
 [sub_resource type="Environment" id="Environment_kbjqk"]
 background_mode = 2
-sky = SubResource("Sky_4aogp")
+sky = SubResource("Sky_og8a5")
 ambient_light_color = Color(0.894118, 0.592157, 0.360784, 1)
 ambient_light_energy = 0.37
 tonemap_mode = 2
@@ -49,7 +50,7 @@ vertices_per_polygon = 3.0
 
 [node name="LevelOne" type="Node"]
 script = ExtResource("1_s76hs")
-dialogs = Array[Resource("res://Scripts/dialog.gd")]([ExtResource("2_ul0oo"), ExtResource("3_wt4vn"), ExtResource("4_8y141")])
+dialogs = Array[Resource("res://Scripts/dialog.gd")]([ExtResource("2_ul0oo"), ExtResource("3_wt4vn"), ExtResource("4_8y141"), ExtResource("5_5g807")])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kbjqk")
@@ -136,16 +137,21 @@ autoplay = true
 
 [node name="DialogContainer" parent="." instance=ExtResource("12_vyxt0")]
 
+[node name="Dialog0Trigger" parent="." instance=ExtResource("14_lps7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.97, -3)
+
 [node name="Dialog1Trigger" parent="." instance=ExtResource("14_lps7i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -1)
 
-[node name="Dialog0Trigger" parent="." instance=ExtResource("14_lps7i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.97, -3)
+[node name="Dialog2Trigger" parent="." instance=ExtResource("14_lps7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01029, 1.01383, 3.01487)
+triggerOnArea = 9
 
 [connection signal="damage_recevied" from="PixelateViewport/SubViewport/Crawler" to="PartyMemberList" method="on_damage_received"]
 [connection signal="AttackMade" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="attack"]
 [connection signal="GameOver" from="PartyMemberList" to="GameOver" method="on_game_over"]
 [connection signal="Interact" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="interact"]
 [connection signal="Interacted" from="Props/Lever_Left2" to="." method="_on_lever_left_2_interacted"]
-[connection signal="Triggered" from="Dialog1Trigger" to="." method="_on_dialog_1_trigger_triggered"]
 [connection signal="Triggered" from="Dialog0Trigger" to="." method="_on_dialog_0_trigger_triggered"]
+[connection signal="Triggered" from="Dialog1Trigger" to="." method="_on_dialog_1_trigger_triggered"]
+[connection signal="Triggered" from="Dialog2Trigger" to="." method="_on_dialog_2_trigger_triggered"]
