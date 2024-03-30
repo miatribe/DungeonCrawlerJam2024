@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0rv7rqe4gg2t"]
+
+[ext_resource type="Material" uid="uid://b1ilt2ullj75b" path="res://Resources/goremat.tres" id="1_nmh2x"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_igubh"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 2, 1.01924e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 125, 4, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 125, 4, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x2ut0"]
+resource_name = "BasicSetNoUV_Plane_012"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 2, 1.01924e-05),
+"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 0, 0, 0, 0, 255, 127, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": ExtResource("1_nmh2x"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 125, 4, 255, 127, 255, 255, 0, 0, 0, 0, 255, 127, 0, 0, 255, 255, 125, 4, 255, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_igubh")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_veq7o"]
+data = PackedVector3Array(-1, 0, -1, 1, 2, -1, 1, 0, -1, -1, 0, -1, -1, 2, -1, 1, 2, -1)
+
+[node name="WallOnly" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 0)
+mesh = SubResource("ArrayMesh_x2ut0")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_veq7o")

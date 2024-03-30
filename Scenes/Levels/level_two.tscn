@@ -1,16 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://ch71qctv32dyg"]
+[gd_scene load_steps=14 format=3 uid="uid://ch71qctv32dyg"]
 
-[ext_resource type="Script" path="res://Scripts/level_one.gd" id="1_u8211"]
-[ext_resource type="Resource" uid="uid://dwstgxxirfbud" path="res://Resources/Dialog_0.tres" id="2_bfyah"]
-[ext_resource type="Resource" uid="uid://b8nb7j7u6hs7y" path="res://Resources/Dialog_1.tres" id="3_vq5fr"]
-[ext_resource type="Resource" uid="uid://btqh6dmoq7k1e" path="res://Resources/Dialog_2.tres" id="4_7e02h"]
-[ext_resource type="Resource" uid="uid://bm1nskwjnnjti" path="res://Resources/Dialog_3.tres" id="5_xg6a8"]
+[ext_resource type="Script" path="res://Scripts/level_two.gd" id="1_s6q77"]
+[ext_resource type="PackedScene" uid="uid://c4yy6byn12tbr" path="res://Scenes/Enemy/tenticle.tscn" id="6_dbtem"]
 [ext_resource type="PackedScene" uid="uid://coeceae30b66w" path="res://Scenes/Player/crawler.tscn" id="6_yor8s"]
 [ext_resource type="PackedScene" uid="uid://bumt3b3xb68p" path="res://Scenes/UI/party_member_list.tscn" id="7_jk1pn"]
 [ext_resource type="MeshLibrary" uid="uid://e6pmxlbnc8ha" path="res://Resources/gore_tilesset.tres" id="8_8inb8"]
+[ext_resource type="PackedScene" uid="uid://d0rv7rqe4gg2t" path="res://Scenes/Environment/gore_wall.tscn" id="9_3ogmv"]
 [ext_resource type="PackedScene" uid="uid://b6o6e3k2bn7r4" path="res://Scenes/Enemy/monster.tscn" id="15_uycca"]
 [ext_resource type="PackedScene" uid="uid://bn03n7yxgpgln" path="res://Scenes/UI/game_over.tscn" id="16_pd1pl"]
-[ext_resource type="AudioStream" uid="uid://cwx85lerslnsp" path="res://Assets/HorrorMichael.mp3" id="17_kan5p"]
 [ext_resource type="PackedScene" uid="uid://2bcx7j6r8fym" path="res://Scenes/UI/dialogPanel.tscn" id="18_thefx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6mi60"]
@@ -47,9 +44,8 @@ region_min_size = 1.0
 region_merge_size = 9.49
 vertices_per_polygon = 3.0
 
-[node name="LevelOne" type="Node"]
-script = ExtResource("1_u8211")
-dialogs = Array[Resource("res://Scripts/dialog.gd")]([ExtResource("2_bfyah"), ExtResource("3_vq5fr"), ExtResource("4_7e02h"), ExtResource("5_xg6a8")])
+[node name="LevelTwo" type="Node"]
+script = ExtResource("1_s6q77")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kbjqk")
@@ -88,6 +84,12 @@ size_flags_vertical = 4
 
 [node name="Props" type="Node" parent="."]
 
+[node name="FirstWall" parent="Props" instance=ExtResource("9_3ogmv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -7)
+
+[node name="FirstWall2" parent="Props" instance=ExtResource("9_3ogmv")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 1, -19)
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_pr8ne")
 
@@ -103,12 +105,22 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 [node name="monster" parent="Enemies" instance=ExtResource("15_uycca")]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, -3, 1.18245, 3)
 
-[node name="GameOver" parent="." instance=ExtResource("16_pd1pl")]
+[node name="monster2" parent="Enemies" instance=ExtResource("15_uycca")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -9, 1, -9.48673)
 
-[node name="BGM" type="AudioStreamPlayer" parent="."]
-process_mode = 3
-stream = ExtResource("17_kan5p")
-autoplay = true
+[node name="monster3" parent="Enemies" instance=ExtResource("15_uycca")]
+transform = Transform3D(1, 0, -7.10543e-15, 0, 1, 0, 7.10543e-15, 0, 1, -21, 1, -15)
+
+[node name="tenticle_one" parent="Enemies" instance=ExtResource("6_dbtem")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0.897764, 7)
+
+[node name="tenticle_one2" parent="Enemies" instance=ExtResource("6_dbtem")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5, 0.931447, -7)
+
+[node name="tenticle_one3" parent="Enemies" instance=ExtResource("6_dbtem")]
+transform = Transform3D(-1.7, 0, -2.56693e-07, 0, 1.7, 0, 2.56693e-07, 0, -1.7, -21, 1, -5)
+
+[node name="GameOver" parent="." instance=ExtResource("16_pd1pl")]
 
 [node name="DialogContainer" parent="." instance=ExtResource("18_thefx")]
 
@@ -116,3 +128,6 @@ autoplay = true
 [connection signal="AttackMade" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="attack"]
 [connection signal="GameOver" from="PartyMemberList" to="GameOver" method="on_game_over"]
 [connection signal="Interact" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="interact"]
+[connection signal="tenticle_death" from="Enemies/tenticle_one" to="." method="_on_tenticle_one_tenticle_death"]
+[connection signal="tenticle_death" from="Enemies/tenticle_one2" to="." method="_on_tenticle_one_tenticle_death"]
+[connection signal="tenticle_death" from="Enemies/tenticle_one3" to="." method="_on_tenticle_one_tenticle_death"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dhuv7uh2fxq04"]
+[gd_scene load_steps=27 format=3 uid="uid://dhuv7uh2fxq04"]
 
 [ext_resource type="PackedScene" uid="uid://coeceae30b66w" path="res://Scenes/Player/crawler.tscn" id="1_n0ayk"]
 [ext_resource type="Script" path="res://Scripts/level_one.gd" id="1_s76hs"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dobk40b4hkl50" path="res://Scenes/Environment/wall.tscn" id="7_ji2io"]
 [ext_resource type="PackedScene" uid="uid://2q7r4tgcamha" path="res://Scenes/Enemy/skeleton.tscn" id="9_jpaxb"]
 [ext_resource type="PackedScene" uid="uid://bn03n7yxgpgln" path="res://Scenes/UI/game_over.tscn" id="9_m3kja"]
-[ext_resource type="AudioStream" uid="uid://cwx85lerslnsp" path="res://Assets/HorrorMichael.mp3" id="11_6j55r"]
 [ext_resource type="PackedScene" uid="uid://2bcx7j6r8fym" path="res://Scenes/UI/dialogPanel.tscn" id="12_vyxt0"]
 [ext_resource type="PackedScene" uid="uid://b67t360b7o1eb" path="res://Scenes/Environment/trigger.tscn" id="14_lps7i"]
 [ext_resource type="PackedScene" uid="uid://d26sbbhrl3cx3" path="res://Scenes/Enemy/skeleton_headless.tscn" id="14_rnsky"]
@@ -218,11 +217,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.599
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -23.1096, 1, -1.14172)
 
 [node name="GameOver" parent="." instance=ExtResource("9_m3kja")]
-
-[node name="BGM" type="AudioStreamPlayer" parent="."]
-process_mode = 3
-stream = ExtResource("11_6j55r")
-autoplay = true
 
 [node name="DialogContainer" parent="." instance=ExtResource("12_vyxt0")]
 
