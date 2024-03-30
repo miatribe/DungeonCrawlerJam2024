@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b1ilt2ullj75b"]
+
+[ext_resource type="Texture2D" uid="uid://cbsvjsipvy6v6" path="res://Assets/goreAtlas.png" id="1_fdurb"]
+[ext_resource type="Texture2D" uid="uid://bad2ge8f8b4fa" path="res://Assets/goreAtlas_n.png" id="2_74lp7"]
+
+[resource]
+albedo_texture = ExtResource("1_fdurb")
+normal_enabled = true
+normal_scale = 0.25
+normal_texture = ExtResource("2_74lp7")
+clearcoat = 0.26
+clearcoat_roughness = 0.47
