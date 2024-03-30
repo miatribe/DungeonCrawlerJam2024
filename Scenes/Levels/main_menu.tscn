@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dii0rkwuloskv"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/main_menu.gd" id="1_d1m7t"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_d1m7t"]
 [ext_resource type="MeshLibrary" uid="uid://dv5hv4ntgals7" path="res://Resources/tileset.tres" id="1_tagr4"]
 [ext_resource type="PackedScene" uid="uid://br2y6a7bjmadj" path="res://Assets/Statue_Fox.glb" id="2_a7ip0"]
 [ext_resource type="PackedScene" uid="uid://de40gxhg1uafi" path="res://Scenes/UI/non_web_button.tscn" id="3_83ugp"]

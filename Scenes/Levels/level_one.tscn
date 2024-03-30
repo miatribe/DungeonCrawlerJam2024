@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dhuv7uh2fxq04"]
+[gd_scene load_steps=27 format=3 uid="uid://dhuv7uh2fxq04"]
 
 [ext_resource type="PackedScene" uid="uid://coeceae30b66w" path="res://Scenes/Player/crawler.tscn" id="1_n0ayk"]
 [ext_resource type="Script" path="res://Scripts/level_one.gd" id="1_s76hs"]
@@ -17,6 +17,8 @@
 [ext_resource type="AudioStream" uid="uid://cwx85lerslnsp" path="res://Assets/HorrorMichael.mp3" id="11_6j55r"]
 [ext_resource type="PackedScene" uid="uid://2bcx7j6r8fym" path="res://Scenes/UI/dialogPanel.tscn" id="12_vyxt0"]
 [ext_resource type="PackedScene" uid="uid://b67t360b7o1eb" path="res://Scenes/Environment/trigger.tscn" id="14_lps7i"]
+[ext_resource type="PackedScene" uid="uid://d26sbbhrl3cx3" path="res://Scenes/Enemy/skeleton_headless.tscn" id="14_rnsky"]
+[ext_resource type="PackedScene" uid="uid://b6o6e3k2bn7r4" path="res://Scenes/Enemy/monster.tscn" id="19_higpa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6mi60"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -34,8 +36,10 @@ tonemap_mode = 2
 glow_enabled = true
 fog_enabled = true
 fog_light_color = Color(0.894118, 0.592157, 0.360784, 1)
-fog_light_energy = 0.02
-fog_density = 0.3954
+fog_light_energy = 0.01
+fog_density = 0.6
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_pr8ne"]
 vertices = PackedVector3Array(-22.8, 1.5, -1.6, -23, 1.5, -7, -23, 1.5, -0.8, -22.2, 1.5, -1, -22.8, 1.5, -1.6, -23, 1.5, -0.8, -8.2, 1.5, 7.2, -8.2, 1.5, 7, -8.8, 1.5, 6.4, -8.8, 1.5, 7.8, -8.2, 1.5, 7.2, -8.8, 1.5, 6.4, -22.2, 1.5, -1, -23, 1.5, -0.8, -17.6, 1.5, -0.8, -16.8, 1.5, -1, -22.2, 1.5, -1, -17.6, 1.5, -0.8, -16.8, 1.5, -1, -17.6, 1.5, -0.8, -17, 1.5, -0.2, -16.8, 1.5, 2.4, -16.8, 1.5, -1, -17, 1.5, -0.2, -8.8, 1.5, 6.4, -8.8, 1.5, 3, -16.2, 1.5, 3, -16.8, 1.5, 2.4, -17, 1.5, -0.2, -17, 1.5, 11, -16.2, 1.5, 3, -16.8, 1.5, 2.4, -17, 1.5, 11, -17, 1.5, 11, -8.8, 1.5, 11, -8.8, 1.5, 7.8, -16.2, 1.5, 3, -17, 1.5, 11, -8.8, 1.5, 7.8, -8.8, 1.5, 6.4, -16.2, 1.5, 3, -8.8, 1.5, 7.8, -0.199999, 1.5, -2.8, 3.2, 1.5, -3, -1, 1.5, -3, -0.799999, 1.5, -2.2, -0.199999, 1.5, -2.8, -1, 1.5, -3, -4.8, 1.5, 0.400001, -5, 1.5, -3, -5, 1.5, 1.2, -4.2, 1.5, 1, -4.8, 1.5, 0.400001, -5, 1.5, 1.2, -0.799999, 1.5, -2.2, -1, 1.5, -3, -1, 1.5, 0.2, -0.799999, 1.5, 0.400001, -0.799999, 1.5, -2.2, -1, 1.5, 0.2, -0.799999, 1.5, 0.400001, -1, 1.5, 0.2, -1.8, 1.5, 1, -0.199999, 1.5, 1, -0.799999, 1.5, 0.400001, -1.8, 1.5, 1, -1.8, 1.5, 1, -4.2, 1.5, 1, -5, 1.5, 1.2, -1.8, 1.5, 1, -5, 1.5, 1.2, 2.4, 1.5, 1.2, -0.199999, 1.5, 1, -1.8, 1.5, 1, 2.4, 1.5, 1.2, 3.2, 1.5, 1, -0.199999, 1.5, 1, 2.4, 1.5, 1.2, 3.2, 1.5, 1, 2.4, 1.5, 1.2, 3, 1.5, 1.8, 3.2, 1.5, 1, 3, 1.5, 1.8, 3, 1.5, 6.2, 3.2, 1.5, 7.2, 3.2, 1.5, 1, 3, 1.5, 6.2, 3.2, 1.5, 7.2, 3, 1.5, 6.2, 2.2, 1.5, 7, -8.2, 1.5, 7.2, 3.2, 1.5, 7.2, 2.2, 1.5, 7, -8.2, 1.5, 7, -8.2, 1.5, 7.2, 2.2, 1.5, 7)
@@ -47,6 +51,37 @@ agent_radius = 0.7
 region_min_size = 1.0
 region_merge_size = 9.49
 vertices_per_polygon = 3.0
+
+[sub_resource type="FogMaterial" id="FogMaterial_yr70e"]
+emission = Color(0.823529, 0.129412, 1, 1)
+
+[sub_resource type="Animation" id="Animation_ssgc1"]
+resource_name = "pulse"
+loop_mode = 1
+tracks/0/type = "scale_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 1, 1, 1, 0.6, 1, 0.5, 0.5, 0.5, 1, 1, 1, 1, 1)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OmniLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.5, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hyq4u"]
+_data = {
+"pulse": SubResource("Animation_ssgc1")
+}
 
 [node name="LevelOne" type="Node"]
 script = ExtResource("1_s76hs")
@@ -128,6 +163,9 @@ transform = Transform3D(-1.2, 0, -1.04907e-07, 0, 1.2, 0, 1.04907e-07, 0, -1.2, 
 [node name="Skeleton2" parent="Enemies" instance=ExtResource("9_jpaxb")]
 transform = Transform3D(1.57361e-07, 0, -1.2, 0, 1.2, 0, 1.2, 0, 1.57361e-07, -3.53936, 1, 7.05145)
 
+[node name="Skeleton3" parent="Enemies" instance=ExtResource("14_rnsky")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.59987, 1, 6.89773)
+
 [node name="GameOver" parent="." instance=ExtResource("9_m3kja")]
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
@@ -146,6 +184,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -1)
 [node name="Dialog2Trigger" parent="." instance=ExtResource("14_lps7i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01029, 1.01383, 3.01487)
 triggerOnArea = 9
+
+[node name="monster" parent="." instance=ExtResource("19_higpa")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -23.1096, 1, -1.14172)
+
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -22.9228, 1.97382, -7.4176)
+size = Vector3(2, 1.8442, 1.12793)
+shape = 2
+material = SubResource("FogMaterial_yr70e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FogVolume"]
+libraries = {
+"": SubResource("AnimationLibrary_hyq4u")
+}
+autoplay = "pulse"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="FogVolume"]
+light_color = Color(0.823529, 0.129412, 1, 1)
 
 [connection signal="damage_recevied" from="PixelateViewport/SubViewport/Crawler" to="PartyMemberList" method="on_damage_received"]
 [connection signal="AttackMade" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="attack"]
