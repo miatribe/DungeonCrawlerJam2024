@@ -10,6 +10,6 @@ signal HealthChanged()
 @export var currentHealth:int:
 	set(hp_in):
 		currentHealth = clampi(hp_in,0,maxHealth)
-		HealthChanged.emit()	
+		HealthChanged.emit()
 @export var action_1:Action
 @export var action_2:Action

@@ -10,10 +10,10 @@
 script = ExtResource("1_c55g0")
 actionName = "Shoot"
 action_type = 0
-cooldownTime = 10.0
+cooldownTime = 5.0
 icon = ExtResource("1_lbtyb")
 cellRange = 4
-damage = 5
+damage = 10
 targetMemberIndex = 0
 healAmount = 0
 

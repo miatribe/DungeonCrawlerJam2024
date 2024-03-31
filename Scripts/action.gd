@@ -19,4 +19,3 @@ enum actionType{
 #fields for type of heal
 @export var targetMemberIndex:=0
 @export var healAmount:=0
-

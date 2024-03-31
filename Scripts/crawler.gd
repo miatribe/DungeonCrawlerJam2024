@@ -37,23 +37,22 @@ func _input(event: InputEvent) -> void:
 func attack(cellRange:int,damage:int) -> void:
 	var collider = get_interacable_object(cellRange,2)
 	if collider:
-		var colliderParent = collider.get_parent()
-		if colliderParent.has_method("take_damage"):
-			collider.get_parent().take_damage(damage)
+		if collider.has_method("take_damage"):
+			collider.take_damage(damage)
 
 
 func interact() -> void:
 	var collider = get_interacable_object(0,4)
 	if collider:
-		var colliderParent = collider.get_parent()
-		if colliderParent.has_method("interact"):
-			collider.get_parent().interact()
+		if collider.has_method("interact"):
+			collider.interact()
 
 
 func get_interacable_object(cellRange:int,collisionMask:int) -> Node:
 	shape_cast_3d.target_position = Vector3.FORWARD * cellRange
 	shape_cast_3d.force_shapecast_update()
-	if shape_cast_3d.is_colliding():
-		if shape_cast_3d.get_collider(0).get_collision_layer()  == collisionMask:
-			return shape_cast_3d.get_collider(0)
+	if shape_cast_3d.collision_result.size() > 0:
+		print(shape_cast_3d.collision_result[0].collider)
+		if shape_cast_3d.collision_result[0].collider.get_collision_layer() == collisionMask:
+			return shape_cast_3d.collision_result[0].collider.get_parent()
 	return null

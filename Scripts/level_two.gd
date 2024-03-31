@@ -6,9 +6,9 @@ extends Node
 @onready var party_member_list: HBoxContainer = $PartyMemberList
 @onready var dialog_container: MarginContainer = $DialogContainer
 
- 
+
 func _on_tenticle_one_tenticle_death() -> void:
-	$Props/FirstWall.position.y = 3 
+	$Props/FirstWall.position.y = 3
 	if $Triggers/Trigger3:
 		$Triggers/Trigger3.queue_free()
 
@@ -21,7 +21,7 @@ func _on_tenticle_one_3_tenticle_death() -> void:
 func _on_tenticle_one_2_tenticle_death() -> void:
 	if $Triggers/Trigger5:
 		$Triggers/Trigger5.queue_free()
-	$Props/SecondWall.position.y = 3 
+	$Props/SecondWall.position.y = 3
 
 
 func _on_trigger_triggered() -> void:

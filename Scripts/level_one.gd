@@ -10,7 +10,7 @@ extends Node
 func _ready() -> void:
 	for pm in party_member_list.PartyMembers:
 		pm.currentHealth = pm.maxHealth
- 
+
 
 func _on_dialog_0_trigger_triggered() -> void:
 	dialog_container.dialog = dialogs[0]
@@ -57,14 +57,13 @@ func _on_fox_interacted() -> void:
 	if $Triggers/Dialog6Trigger:
 		$Triggers/Dialog6Trigger.queue_free()
 	dialog_container.dialog = dialogs[9]
-	$Props/WallToPortal.position.y = 3 
+	$Props/WallToPortal.position.y = 3
 
 
 func _on_portal_trigger_triggered() -> void:
+	call_deferred("next_level")
+
+
+func next_level() -> void:
 	var level2 = load("res://Scenes/Levels/level_two.tscn")
 	get_tree().change_scene_to_packed(level2)
-
-
-
-
-

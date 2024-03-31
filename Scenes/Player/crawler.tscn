@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/crawler.gd" id="1_powfg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mbhr5"]
-size = Vector3(1.9, 1.9, 1.9)
+size = Vector3(1.7, 1.7, 1.7)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nopgj"]
 size = Vector3(1.9, 1.9, 1.9)
@@ -39,6 +39,7 @@ collision_mask = 3
 collide_with_areas = true
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="MidPointMarker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.807038)
 shape = SubResource("BoxShape3D_mbhr5")
 target_position = Vector3(0, 0, 0)
 collision_mask = 7
