@@ -1,5 +1,6 @@
 extends Button
 
+
 var autoCloseTime:float:
 	set(time_in):
 		autoCloseTime = time_in

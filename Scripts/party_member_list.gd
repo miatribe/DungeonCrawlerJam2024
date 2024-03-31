@@ -29,8 +29,8 @@ func on_party_member_action(action:Action) -> void:
 				if pm.maxHealth -pm.currentHealth > pmWithLowestHP.maxHealth - pmWithLowestHP.currentHealth:
 					pmWithLowestHP = pm
 			pmWithLowestHP.currentHealth += action.healAmount
-			
-			
+
+
 func on_damage_received(damage:int) -> void:
 	var pmWithHighestHP = PartyMembers[0]
 	for pm in PartyMembers:

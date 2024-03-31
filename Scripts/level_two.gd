@@ -13,7 +13,6 @@ func _on_tenticle_one_tenticle_death() -> void:
 		$Triggers/Trigger3.queue_free()
 
 
-
 func _on_tenticle_one_3_tenticle_death() -> void:
 	$Props/Portal.visible = true
 	$Triggers/VictoryTrigger.visible = true
