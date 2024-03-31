@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://2bcx7j6r8fym"]
+[gd_scene load_steps=5 format=3 uid="uid://2bcx7j6r8fym"]
 
 [ext_resource type="Texture2D" uid="uid://ch5vt2ibuhik2" path="res://Assets/MichaelFace.png" id="1_o7ssi"]
 [ext_resource type="Script" path="res://Scripts/dialogPanel.gd" id="1_suk2k"]
 [ext_resource type="PackedScene" uid="uid://csxpt1p66ouf1" path="res://Scenes/UI/dialog_close_button.tscn" id="2_lvm62"]
+[ext_resource type="Theme" uid="uid://t5q7l0mnqh4c" path="res://Resources/foxtheme.tres" id="2_trb76"]
 
 [node name="DialogContainer" type="MarginContainer"]
 anchors_preset = 5
@@ -43,11 +44,14 @@ layout_mode = 2
 
 [node name="MemberNameLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TopBar"]
 layout_mode = 2
+theme = ExtResource("2_trb76")
+theme_override_font_sizes/font_size = 21
 text = "Party Member Name"
 
 [node name="DialogCloseButton" parent="PanelContainer/MarginContainer/VBoxContainer/TopBar" instance=ExtResource("2_lvm62")]
 layout_mode = 2
 size_flags_horizontal = 10
+theme = ExtResource("2_trb76")
 
 [node name="Content" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

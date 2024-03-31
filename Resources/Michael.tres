@@ -10,10 +10,10 @@
 script = ExtResource("1_lxq30")
 actionName = "Stab!"
 action_type = 0
-cooldownTime = 0.5
+cooldownTime = 1.0
 icon = ExtResource("1_ugmox")
 cellRange = 1
-damage = 10
+damage = 8
 targetMemberIndex = 0
 healAmount = 0
 

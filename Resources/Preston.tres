@@ -13,7 +13,7 @@ action_type = 0
 cooldownTime = 5.0
 icon = ExtResource("1_lbtyb")
 cellRange = 4
-damage = 10
+damage = 15
 targetMemberIndex = 0
 healAmount = 0
 

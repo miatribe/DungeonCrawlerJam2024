@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bn03n7yxgpgln"]
+[gd_scene load_steps=4 format=3 uid="uid://bn03n7yxgpgln"]
 
+[ext_resource type="Theme" uid="uid://t5q7l0mnqh4c" path="res://Resources/foxtheme.tres" id="1_2hdv0"]
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_sbvxg"]
 [ext_resource type="PackedScene" uid="uid://de40gxhg1uafi" path="res://Scenes/UI/non_web_button.tscn" id="2_vo5vx"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_2hdv0")
 script = ExtResource("1_sbvxg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -38,7 +40,7 @@ grow_vertical = 2
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 60
 text = "Game over
 "
 horizontal_alignment = 1
@@ -46,6 +48,7 @@ horizontal_alignment = 1
 [node name="Message" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(300, 10)
 layout_mode = 2
+theme_override_font_sizes/font_size = 36
 text = "A party member has died
 "
 horizontal_alignment = 1
