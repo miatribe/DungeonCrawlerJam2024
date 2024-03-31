@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DungeonCrawlerJam2024"
-run/main_scene="res://Scenes/Levels/level_one.tscn"
+run/main_scene="res://Scenes/Levels/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Assets/MichaelFace.png"
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dhuv7uh2fxq04"]
+[gd_scene load_steps=31 format=3 uid="uid://dhuv7uh2fxq04"]
 
 [ext_resource type="PackedScene" uid="uid://coeceae30b66w" path="res://Scenes/Player/crawler.tscn" id="1_n0ayk"]
 [ext_resource type="Script" path="res://Scripts/level_one.gd" id="1_s76hs"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://2bcx7j6r8fym" path="res://Scenes/UI/dialogPanel.tscn" id="12_vyxt0"]
 [ext_resource type="PackedScene" uid="uid://b67t360b7o1eb" path="res://Scenes/Environment/trigger.tscn" id="14_lps7i"]
 [ext_resource type="PackedScene" uid="uid://d26sbbhrl3cx3" path="res://Scenes/Enemy/skeleton_headless.tscn" id="14_rnsky"]
+[ext_resource type="PackedScene" uid="uid://dlm318ya0bs05" path="res://Scenes/Environment/portal.tscn" id="18_sersn"]
 [ext_resource type="PackedScene" uid="uid://b6o6e3k2bn7r4" path="res://Scenes/Enemy/monster.tscn" id="19_higpa"]
 [ext_resource type="PackedScene" uid="uid://nkwno56yqkrm" path="res://Scenes/Environment/fox.tscn" id="22_ppftu"]
 
@@ -39,41 +40,11 @@ ambient_light_color = Color(0.894118, 0.592157, 0.360784, 1)
 ambient_light_energy = 0.37
 tonemap_mode = 2
 glow_enabled = true
+fog_enabled = true
 fog_light_color = Color(0.894118, 0.592157, 0.360784, 1)
 fog_light_energy = 0.01
 fog_density = 0.6
 volumetric_fog_density = 0.0
-
-[sub_resource type="FogMaterial" id="FogMaterial_yr70e"]
-emission = Color(0.823529, 0.129412, 1, 1)
-
-[sub_resource type="Animation" id="Animation_ssgc1"]
-resource_name = "pulse"
-loop_mode = 1
-tracks/0/type = "scale_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 1, 1, 1, 0.6, 1, 0.5, 0.5, 0.5, 1, 1, 1, 1, 1)
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("OmniLight3D:light_energy")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [1.0, 0.5, 1.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hyq4u"]
-_data = {
-"pulse": SubResource("Animation_ssgc1")
-}
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0wnvb"]
 size = Vector3(2, 2, 2)
@@ -154,21 +125,6 @@ transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -17, 1, 
 [node name="WallOutOfFoxRoom" parent="Props" instance=ExtResource("7_ji2io")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9, 3, 7)
 
-[node name="FogVolume" type="FogVolume" parent="Props"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -22.9228, 1.97382, -7.4176)
-size = Vector3(2, 1.8442, 1.12793)
-shape = 2
-material = SubResource("FogMaterial_yr70e")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Props/FogVolume"]
-libraries = {
-"": SubResource("AnimationLibrary_hyq4u")
-}
-autoplay = "pulse"
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Props/FogVolume"]
-light_color = Color(0.823529, 0.129412, 1, 1)
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2, 11)
 
@@ -201,6 +157,9 @@ shape = SubResource("BoxShape3D_0wnvb")
 
 [node name="Fox" parent="Props" instance=ExtResource("22_ppftu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13, 1, 7)
+
+[node name="Portal" parent="Props" instance=ExtResource("18_sersn")]
+transform = Transform3D(0.668804, 0, 0, 0, 0.668804, 0, 0, 0, 0.668804, -23, 2, -7)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_pr8ne")
