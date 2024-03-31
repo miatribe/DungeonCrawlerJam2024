@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://dd8xfdvo3rqhm"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_dl1uq"]
+[ext_resource type="Resource" uid="uid://dfixx1nmx5dqa" path="res://Resources/Michael.tres" id="2_fvlxr"]
+
+[resource]
+script = ExtResource("1_dl1uq")
+speaker = ExtResource("2_fvlxr")
+message = "That wasn’t a normal portal. The walls are moving! Is that…flesh?"
+autoCloseTime = 6.0

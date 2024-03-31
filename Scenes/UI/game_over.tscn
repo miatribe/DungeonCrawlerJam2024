@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.164706, 0.0980392, 0.0980392, 0.886275)
+color = Color(0.164706, 0.0980392, 0.0980392, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -36,20 +36,32 @@ offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Game over
-A party member has died
 "
 horizontal_alignment = 1
 
-[node name="RetryButton" type="Button" parent="VBoxContainer"]
+[node name="Message" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 10)
 layout_mode = 2
-text = "Retry"
+text = "A party member has died
+"
+horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="NonWebButton" parent="VBoxContainer" instance=ExtResource("2_vo5vx")]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RetryButton" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play Again"
+
+[node name="NonWebButton" parent="VBoxContainer/VBoxContainer" instance=ExtResource("2_vo5vx")]
 layout_mode = 2
 text = "Exit Game"
 
-[connection signal="pressed" from="VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/NonWebButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/NonWebButton" to="." method="_on_exit_button_pressed"]

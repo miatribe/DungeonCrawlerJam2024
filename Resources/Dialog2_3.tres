@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://dkl5mbylmnawj"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_cehx3"]
+[ext_resource type="Resource" uid="uid://yfw83ir1npr1" path="res://Resources/Preston.tres" id="2_hkf0j"]
+
+[resource]
+script = ExtResource("1_cehx3")
+speaker = ExtResource("2_hkf0j")
+message = "I hope whoever’s body part this is, won’t be mad when we chop into tiny pieces!"
+autoCloseTime = 6.0

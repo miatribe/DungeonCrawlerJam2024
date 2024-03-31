@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://btgfk1oxmiell"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_7ojhv"]
+[ext_resource type="Resource" uid="uid://cmx2r5eumtf1n" path="res://Resources/Nathan.tres" id="2_w46sa"]
+
+[resource]
+script = ExtResource("1_7ojhv")
+speaker = ExtResource("2_w46sa")
+message = "I guess we know where that weird monster came from."
+autoCloseTime = 6.0

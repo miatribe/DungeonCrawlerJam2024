@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://bd27rwewnl5vv"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_d5clg"]
+[ext_resource type="Resource" uid="uid://yfw83ir1npr1" path="res://Resources/Preston.tres" id="2_8t1co"]
+
+[resource]
+script = ExtResource("1_d5clg")
+speaker = ExtResource("2_8t1co")
+message = "This better be the way back home!"
+autoCloseTime = 6.0

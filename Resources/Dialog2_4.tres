@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://du2t1rbww4tkt"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_8yx4x"]
+[ext_resource type="Resource" uid="uid://yfw83ir1npr1" path="res://Resources/Preston.tres" id="2_4tcdp"]
+
+[resource]
+script = ExtResource("1_8yx4x")
+speaker = ExtResource("2_4tcdp")
+message = "We must have missed something, let’s check back on the other corridor."
+autoCloseTime = 6.0

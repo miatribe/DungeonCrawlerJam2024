@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://b2wt5gbwgeh18"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_aff7g"]
+[ext_resource type="Resource" uid="uid://cmx2r5eumtf1n" path="res://Resources/Nathan.tres" id="2_eq2b8"]
+
+[resource]
+script = ExtResource("1_aff7g")
+speaker = ExtResource("2_eq2b8")
+message = "Let’s keep exploring, we must have missed something."
+autoCloseTime = 6.0
