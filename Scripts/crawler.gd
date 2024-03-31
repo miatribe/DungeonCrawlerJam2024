@@ -39,7 +39,6 @@ func attack(cellRange:int,damage:int) -> void:
 	if collider:
 		var colliderParent = collider.get_parent()
 		if colliderParent.has_method("take_damage"):
-			print(colliderParent)
 			collider.get_parent().take_damage(damage)
 
 

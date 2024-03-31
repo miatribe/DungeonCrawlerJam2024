@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://nkwno56yqkrm"]
+
+[ext_resource type="PackedScene" uid="uid://br2y6a7bjmadj" path="res://Assets/Statue_Fox.glb" id="1_ceyk4"]
+[ext_resource type="Script" path="res://Scenes/Environment/fox.gd" id="2_6yptw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e0iaw"]
+size = Vector3(2.1, 2.1, 2.1)
+
+[node name="Fox" instance=ExtResource("1_ceyk4")]
+script = ExtResource("2_6yptw")
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_e0iaw")

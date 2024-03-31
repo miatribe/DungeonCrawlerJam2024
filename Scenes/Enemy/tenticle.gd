@@ -19,7 +19,7 @@ var health:= startingHealth:
 @onready var hitbox: Area3D = $Hitbox
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var overlaps = hitbox.get_overlapping_areas()
 	if overlaps:
 		animation_player.play("Tentacle_Attack2")

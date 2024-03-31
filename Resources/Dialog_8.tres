@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://1phtrqjnhmns"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_wcra7"]
+[ext_resource type="Resource" uid="uid://dfixx1nmx5dqa" path="res://Resources/Michael.tres" id="2_xh783"]
+
+[resource]
+script = ExtResource("1_wcra7")
+speaker = ExtResource("2_xh783")
+message = "Woah, we’ve never encountered a portal before. Let’s check it out!"
+autoCloseTime = 6.0

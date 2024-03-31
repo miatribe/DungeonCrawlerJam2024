@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ch71qctv32dyg"]
+[gd_scene load_steps=17 format=3 uid="uid://ch71qctv32dyg"]
 
 [ext_resource type="Script" path="res://Scripts/level_two.gd" id="1_s6q77"]
 [ext_resource type="PackedScene" uid="uid://c4yy6byn12tbr" path="res://Scenes/Enemy/tenticle.tscn" id="6_dbtem"]
@@ -32,6 +32,37 @@ fog_height = 2.5
 fog_height_density = 1.0
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0
+
+[sub_resource type="FogMaterial" id="FogMaterial_iguj0"]
+emission = Color(0.823529, 0.129412, 1, 1)
+
+[sub_resource type="Animation" id="Animation_ssgc1"]
+resource_name = "pulse"
+loop_mode = 1
+tracks/0/type = "scale_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 1, 1, 1, 0.6, 1, 0.5, 0.5, 0.5, 1, 1, 1, 1, 1)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OmniLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.5, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hyq4u"]
+_data = {
+"pulse": SubResource("Animation_ssgc1")
+}
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_pr8ne"]
 vertices = PackedVector3Array(-5, 1.5, -10.25, -4.75, 1.5, -6.75, -4.75, 1.5, -11, -5.5, 1.5, -10.75, -5, 1.5, -10.25, -4.75, 1.5, -11, -5.5, 1.5, -10.75, -4.75, 1.5, -11, -5.75, 1.5, -11, -8.75, 1.5, -14.25, -8.25, 1.5, -14.75, -9.5, 1.5, -14.75, -8.75, 1.5, -14.25, -9.5, 1.5, -14.75, -9, 1.5, -14.25, -8.25, 1.5, -10.75, -5.5, 1.5, -10.75, -5.75, 1.5, -11, -8.25, 1.5, -10.75, -5.75, 1.5, -11, -8.25, 1.5, -11, -8.25, 1.5, -10.75, -8.25, 1.5, -11, -8.75, 1.5, -11.5, -9.5, 1.5, -10.75, -8.25, 1.5, -10.75, -8.75, 1.5, -11.5, -8.75, 1.5, -14.25, -9, 1.5, -14.25, -9, 1.5, -11.75, -8.75, 1.5, -11.5, -8.75, 1.5, -14.25, -9, 1.5, -11.75, -9.5, 1.5, -10.75, -8.75, 1.5, -11.5, -9, 1.5, -11.75, -9.5, 1.5, -10.75, -9, 1.5, -11.75, -9.75, 1.5, -11, -9.5, 1.5, -10.75, -9.75, 1.5, -11, -12.25, 1.5, -11, -13, 1.5, -10.75, -9.5, 1.5, -10.75, -12.25, 1.5, -11, -13, 1.5, -10.75, -12.25, 1.5, -11, -12.75, 1.5, -11.5, -13, 1.5, -12.25, -13, 1.5, -10.75, -12.75, 1.5, -11.5, -13, 1.5, -12.25, -12.75, 1.5, -11.5, -12.75, 1.5, -13, -13.5, 1.5, -12.75, -13, 1.5, -12.25, -12.75, 1.5, -13, -13.5, 1.5, -12.75, -12.75, 1.5, -13, -13.75, 1.5, -13, -13.5, 1.5, -12.75, -13.75, 1.5, -13, -16.25, 1.5, -13, -17, 1.5, -12.75, -13.5, 1.5, -12.75, -16.25, 1.5, -13, -17, 1.5, -12.75, -16.25, 1.5, -13, -16.75, 1.5, -13.5, -17, 1.5, -18.25, -17, 1.5, -12.75, -16.75, 1.5, -13.5, -17, 1.5, -18.25, -16.75, 1.5, -13.5, -16.75, 1.5, -18.25, -17.5, 1.5, -18.75, -17, 1.5, -18.25, -16.75, 1.5, -18.25, -21, 1.5, -18.75, -20.25, 1.5, -18.75, -17.5, 1.5, -18.75, -17.5, 1.5, -18.75, -16.75, 1.5, -18.25, -16.25, 1.5, -18.75, -16.25, 1.5, -18.75, -9.5, 1.5, -18.75, -8.75, 1.5, -18.75, -16.25, 1.5, -18.75, -8.75, 1.5, -18.75, -21, 1.5, -18.75, -21, 1.5, -18.75, -17.5, 1.5, -18.75, -16.25, 1.5, -18.75, -20.75, 1.5, -18.25, -20.25, 1.5, -18.75, -21, 1.5, -18.75, -21.75, 1.5, -9, -23, 1.5, -9, -23, 1.5, -4.75, -18.75, 1.5, -4.75, -18.75, 1.5, -9, -20.25, 1.5, -9, -23, 1.5, -4.75, -18.75, 1.5, -4.75, -20.25, 1.5, -9, -21.75, 1.5, -9, -23, 1.5, -4.75, -20.25, 1.5, -9, -21.75, 1.5, -9, -20.25, 1.5, -9, -20.75, 1.5, -9.5, -21, 1.5, -9.75, -21.75, 1.5, -9, -20.75, 1.5, -9.5, -21, 1.5, -9.75, -20.75, 1.5, -9.5, -20.75, 1.5, -18.25, -21, 1.5, -18.75, -21, 1.5, -9.75, -20.75, 1.5, -18.25, -8.75, 1.5, -18.75, -9.5, 1.5, -18.75, -9, 1.5, -18.25, -5, 1.5, -11.75, -5.75, 1.5, -11, -4.75, 1.5, -11, -13, 1.5, -13.75, -13.75, 1.5, -13, -12.75, 1.5, -13, -13, 1.5, -13.75, -12.75, 1.5, -13, -12.75, 1.5, -14.25, -13, 1.5, -15, -13, 1.5, -13.75, -12.75, 1.5, -14.25, -13, 1.5, -15, -12.75, 1.5, -14.25, -12.25, 1.5, -14.75, -9.75, 1.5, -15, -13, 1.5, -15, -12.25, 1.5, -14.75, -9.75, 1.5, -15, -12.25, 1.5, -14.75, -9.5, 1.5, -14.75, -9, 1.5, -15.75, -9.75, 1.5, -15, -9.5, 1.5, -14.75, -9, 1.5, -15.75, -9.5, 1.5, -14.75, -8.25, 1.5, -14.75, -8.75, 1.5, -15.5, -8.75, 1.5, -18.75, -9, 1.5, -18.25, -8.75, 1.5, -15.5, -9, 1.5, -18.25, -9, 1.5, -15.75, -8.75, 1.5, -15.5, -9, 1.5, -15.75, -8.25, 1.5, -14.75, -8.25, 1.5, -15, -8.75, 1.5, -15.5, -8.25, 1.5, -14.75, -8.25, 1.5, -15, -8.25, 1.5, -14.75, -5.5, 1.5, -14.75, -4.75, 1.5, -15, -8.25, 1.5, -15, -5.5, 1.5, -14.75, -4.75, 1.5, -15, -5.5, 1.5, -14.75, -5, 1.5, -14.25, -5, 1.5, -14.25, -5, 1.5, -11.75, -4.75, 1.5, -11, -5, 1.5, -14.25, -4.75, 1.5, -11, -4.75, 1.5, -15, -1, 1.5, 3.75, -0.75, 1.5, 7, -0.75, 1.5, 3, -1.5, 1.5, 3.25, -1, 1.5, 3.75, -0.75, 1.5, 3, -1.5, 1.5, 3.25, -0.75, 1.5, 3, -2.25, 1.5, 3, -3, 1.5, 3.25, -1.5, 1.5, 3.25, -2.25, 1.5, 3, -3, 1.5, 3.25, -2.25, 1.5, 3, -2.75, 1.5, 2.5, -8.25, 1.5, -10.75, -9.5, 1.5, -10.75, -9, 1.5, -10.25, -8.75, 1.5, -10.25, -8.25, 1.5, -10.75, -9, 1.5, -10.25, -3, 1.5, -2.25, -3, 1.5, 3.25, -2.75, 1.5, 2.5, -3, 1.5, -2.25, -2.75, 1.5, 2.5, -2.75, 1.5, -2.25, -3.5, 1.5, -2.75, -3, 1.5, -2.25, -2.75, 1.5, -2.25, -3.5, 1.5, -2.75, -2.75, 1.5, -2.25, -2.25, 1.5, -2.75, -2.25, 1.5, -2.75, 3.25, 1.5, -3, -8.25, 1.5, -3, -3.5, 1.5, -2.75, -2.25, 1.5, -2.75, -8.25, 1.5, -3, -9, 1.5, -2.75, -3.5, 1.5, -2.75, -8.25, 1.5, -3, -9, 1.5, -2.75, -8.25, 1.5, -3, -8.75, 1.5, -3.5, -9, 1.5, -10.25, -9, 1.5, -2.75, -8.75, 1.5, -3.5, -9, 1.5, -10.25, -8.75, 1.5, -3.5, -8.75, 1.5, -10.25)
@@ -87,8 +118,24 @@ size_flags_vertical = 4
 [node name="FirstWall" parent="Props" instance=ExtResource("9_3ogmv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -7)
 
-[node name="FirstWall2" parent="Props" instance=ExtResource("9_3ogmv")]
+[node name="SecondWall" parent="Props" instance=ExtResource("9_3ogmv")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 1, -19)
+
+[node name="FogVolume" type="FogVolume" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -20.9985, 1.97382, -5.47413)
+visible = false
+size = Vector3(2, 1.8442, 1.12793)
+shape = 2
+material = SubResource("FogMaterial_iguj0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Props/FogVolume"]
+libraries = {
+"": SubResource("AnimationLibrary_hyq4u")
+}
+autoplay = "pulse"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/FogVolume"]
+light_color = Color(0.823529, 0.129412, 1, 1)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_pr8ne")
@@ -129,5 +176,5 @@ transform = Transform3D(-1.7, 0, -2.56693e-07, 0, 1.7, 0, 2.56693e-07, 0, -1.7, 
 [connection signal="GameOver" from="PartyMemberList" to="GameOver" method="on_game_over"]
 [connection signal="Interact" from="PartyMemberList" to="PixelateViewport/SubViewport/Crawler" method="interact"]
 [connection signal="tenticle_death" from="Enemies/tenticle_one" to="." method="_on_tenticle_one_tenticle_death"]
-[connection signal="tenticle_death" from="Enemies/tenticle_one2" to="." method="_on_tenticle_one_tenticle_death"]
-[connection signal="tenticle_death" from="Enemies/tenticle_one3" to="." method="_on_tenticle_one_tenticle_death"]
+[connection signal="tenticle_death" from="Enemies/tenticle_one2" to="." method="_on_tenticle_one_2_tenticle_death"]
+[connection signal="tenticle_death" from="Enemies/tenticle_one3" to="." method="_on_tenticle_one_3_tenticle_death"]

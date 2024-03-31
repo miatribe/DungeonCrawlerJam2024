@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://ba26jkq4m36kv"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_7fv3v"]
+[ext_resource type="Resource" uid="uid://cmx2r5eumtf1n" path="res://Resources/Nathan.tres" id="2_glp0q"]
+
+[resource]
+script = ExtResource("1_7fv3v")
+speaker = ExtResource("2_glp0q")
+message = "Let’s not lose our…heads…there may still be danger lurking."
+autoCloseTime = 6.0

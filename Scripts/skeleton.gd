@@ -1,6 +1,8 @@
 extends Node3D
 
 
+signal death()
+
 @export var attackDamage:int = 10
 @export var speed:float = 1
 @export var startingHealth:int = 30
@@ -49,6 +51,7 @@ func take_damage(damage:int) -> void:
 
 
 func die() -> void:
+	death.emit()
 	queue_free()
 
 

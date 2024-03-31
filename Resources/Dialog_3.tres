@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_5xtic")
 speaker = ExtResource("2_owsjd")
-message = "A Skeleton! It has not seen us yet, we can get the jump on it."
+message = "Michael, you should use your sword, or Preston can use his bow, or I can use my magic to defeat this monster."
 autoCloseTime = 8.0

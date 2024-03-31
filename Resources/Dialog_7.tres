@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://d2n8cv1ilix6h"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_rrfux"]
+[ext_resource type="Resource" uid="uid://cmx2r5eumtf1n" path="res://Resources/Nathan.tres" id="2_lvn0m"]
+
+[resource]
+script = ExtResource("1_rrfux")
+speaker = ExtResource("2_lvn0m")
+message = "Holy smokes! What in the world is that?"
+autoCloseTime = 6.0
