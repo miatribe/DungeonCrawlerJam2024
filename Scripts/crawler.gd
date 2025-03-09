@@ -1,7 +1,7 @@
 extends Node3D
 class_name Crawler
 
-
+@warning_ignore("unused_signal")
 signal damage_recevied(damage:int)
 
 @export var cell_size:int = 2

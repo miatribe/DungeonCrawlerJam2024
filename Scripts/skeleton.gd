@@ -37,7 +37,8 @@ func _physics_process(delta: float) -> void:
 		var direction = global_position.direction_to(next_position)
 		var next_pos_no_y = direction
 		next_pos_no_y.y = 0
-		look_at(global_position + next_pos_no_y, Vector3.UP,false)
+		if global_position + next_pos_no_y != global_position:
+			look_at(global_position + next_pos_no_y, Vector3.UP,false)
 		position += (transform.basis * Vector3.FORWARD) * delta * speed
 	elif aggressed:
 		animation_player.play("Sword")
