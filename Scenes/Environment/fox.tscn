@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://nkwno56yqkrm"]
 
 [ext_resource type="PackedScene" uid="uid://br2y6a7bjmadj" path="res://Assets/Statue_Fox.glb" id="1_ceyk4"]
-[ext_resource type="Script" path="res://Scripts/fox.gd" id="2_6yptw"]
+[ext_resource type="Script" uid="uid://pf1167pbev7v" path="res://Scripts/fox.gd" id="2_6yptw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0iaw"]
 size = Vector3(2.1, 2.1, 2.1)

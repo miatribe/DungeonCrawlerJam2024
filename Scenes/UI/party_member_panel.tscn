@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dynkjvsk5o81l"]
 
-[ext_resource type="Script" path="res://Scripts/party_member_panel.gd" id="1_gtjpt"]
+[ext_resource type="Script" uid="uid://b0j5ur6mpfsxu" path="res://Scripts/party_member_panel.gd" id="1_gtjpt"]
 [ext_resource type="Theme" uid="uid://t5q7l0mnqh4c" path="res://Resources/foxtheme.tres" id="1_vsx7s"]
 [ext_resource type="Texture2D" uid="uid://ch5vt2ibuhik2" path="res://Assets/MichaelFace.png" id="2_ebbqf"]
 [ext_resource type="PackedScene" uid="uid://q1b454wf423a" path="res://Scenes/UI/action_button.tscn" id="3_bvjph"]

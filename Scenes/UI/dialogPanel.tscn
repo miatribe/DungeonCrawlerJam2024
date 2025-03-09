@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://2bcx7j6r8fym"]
 
 [ext_resource type="Texture2D" uid="uid://ch5vt2ibuhik2" path="res://Assets/MichaelFace.png" id="1_o7ssi"]
-[ext_resource type="Script" path="res://Scripts/dialogPanel.gd" id="1_suk2k"]
+[ext_resource type="Script" uid="uid://c5g1dqd76nyd0" path="res://Scripts/dialogPanel.gd" id="1_suk2k"]
 [ext_resource type="PackedScene" uid="uid://csxpt1p66ouf1" path="res://Scenes/UI/dialog_close_button.tscn" id="2_lvm62"]
 [ext_resource type="Theme" uid="uid://t5q7l0mnqh4c" path="res://Resources/foxtheme.tres" id="2_trb76"]
 

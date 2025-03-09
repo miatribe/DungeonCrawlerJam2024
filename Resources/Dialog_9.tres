@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://e7rt7nd5lpqy"]
 
-[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_728r5"]
+[ext_resource type="Script" uid="uid://djmx8f62hukcb" path="res://Scripts/dialog.gd" id="1_728r5"]
 [ext_resource type="Resource" uid="uid://yfw83ir1npr1" path="res://Resources/Preston.tres" id="2_tq7oo"]
 
 [resource]

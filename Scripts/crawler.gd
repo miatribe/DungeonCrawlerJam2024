@@ -14,6 +14,12 @@ signal damage_recevied(damage:int)
 @onready var shape_cast_3d: ShapeCast3D = $MidPointMarker/ShapeCast3D
 
 
+func _ready() -> void:
+	set_process_input(false)
+	await get_tree().create_timer(1).timeout
+	set_process_input(true)
+
+
 func _input(event: InputEvent) -> void:
 	if input_delay.is_stopped():
 		if event.is_action_pressed("MoveFoward") && !ray_foward.is_colliding():

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://de40gxhg1uafi"]
 
-[ext_resource type="Script" path="res://Scripts/NonWebButton.gd" id="1_el26j"]
+[ext_resource type="Script" uid="uid://ctoib16adsqwc" path="res://Scripts/NonWebButton.gd" id="1_el26j"]
 
 [node name="NonWebButton" type="Button"]
 offset_right = 8.0

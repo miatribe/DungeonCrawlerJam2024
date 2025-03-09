@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Dialog" load_steps=3 format=3 uid="uid://dtv8qtp7k0uhm"]
 
-[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_mb3rr"]
+[ext_resource type="Script" uid="uid://djmx8f62hukcb" path="res://Scripts/dialog.gd" id="1_mb3rr"]
 [ext_resource type="Resource" uid="uid://dfixx1nmx5dqa" path="res://Resources/Michael.tres" id="2_yy5hk"]
 
 [resource]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://ch71qctv32dyg"]
+[gd_scene load_steps=24 format=3 uid="uid://ch71qctv32dyg"]
 
-[ext_resource type="Script" path="res://Scripts/level_two.gd" id="1_s6q77"]
+[ext_resource type="Script" uid="uid://dff0uyuivjgfv" path="res://Scripts/level_two.gd" id="1_s6q77"]
+[ext_resource type="Script" uid="uid://djmx8f62hukcb" path="res://Scripts/dialog.gd" id="2_p6fu4"]
 [ext_resource type="Resource" uid="uid://dd8xfdvo3rqhm" path="res://Resources/Dialog2_1.tres" id="2_qflm4"]
 [ext_resource type="Resource" uid="uid://btgfk1oxmiell" path="res://Resources/Dialog2_2.tres" id="3_1oyir"]
 [ext_resource type="Resource" uid="uid://dkl5mbylmnawj" path="res://Resources/Dialog2_3.tres" id="4_oj4o2"]
@@ -55,7 +56,7 @@ vertices_per_polygon = 3.0
 
 [node name="LevelTwo" type="Node"]
 script = ExtResource("1_s6q77")
-dialogs = Array[Resource("res://Scripts/dialog.gd")]([ExtResource("2_qflm4"), ExtResource("3_1oyir"), ExtResource("4_oj4o2"), ExtResource("5_85ots"), ExtResource("6_rx32c"), ExtResource("7_hftt2"), ExtResource("8_ajoww")])
+dialogs = Array[ExtResource("2_p6fu4")]([ExtResource("2_qflm4"), ExtResource("3_1oyir"), ExtResource("4_oj4o2"), ExtResource("5_85ots"), ExtResource("6_rx32c"), ExtResource("7_hftt2"), ExtResource("8_ajoww")])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kbjqk")

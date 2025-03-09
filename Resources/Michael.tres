@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="PartyMember" load_steps=8 format=3 uid="uid://dfixx1nmx5dqa"]
 
-[ext_resource type="Script" path="res://Scripts/action.gd" id="1_lxq30"]
+[ext_resource type="Script" uid="uid://bfn5eip3ct5fw" path="res://Scripts/action.gd" id="1_lxq30"]
 [ext_resource type="Texture2D" uid="uid://cp0e1on4vk0kn" path="res://Assets/two-handed-sword.png" id="1_ugmox"]
 [ext_resource type="Texture2D" uid="uid://ch5vt2ibuhik2" path="res://Assets/MichaelFace.png" id="2_rxfhd"]
-[ext_resource type="Script" path="res://Scripts/party_member.gd" id="3_kvmi5"]
+[ext_resource type="Script" uid="uid://dwttbccixo5vp" path="res://Scripts/party_member.gd" id="3_kvmi5"]
 [ext_resource type="Texture2D" uid="uid://dru64qo7u5cdx" path="res://Assets/bandage-roll.png" id="3_uphm6"]
 
 [sub_resource type="Resource" id="Resource_0yl5w"]

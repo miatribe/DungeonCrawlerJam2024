@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://4vhrp0lobko7"]
+[gd_scene load_steps=41 format=4 uid="uid://4vhrp0lobko7"]
 
 [ext_resource type="Material" uid="uid://b1ilt2ullj75b" path="res://Resources/goremat.tres" id="1_jl3u5"]
 
@@ -7,12 +7,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
 "format": 34896613377,
 "index_count": 30,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 3, 0, 4, 0, 2, 0, 3, 0, 6, 0, 4, 0, 6, 0, 7, 0, 4, 0, 6, 0, 5, 0, 7, 0, 0, 0, 6, 0, 3, 0, 0, 0, 5, 0, 6, 0, 2, 0, 7, 0, 1, 0, 2, 0, 4, 0, 7, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIAAwAEAAIAAwAGAAQABgAHAAQABgAFAAcAAAAGAAMAAAAFAAYAAgAHAAEAAgAEAAcA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAA//8AAP//AAD+/wAA/v8AAAAAAAD//////v8AAAAA//8AAAAA/v///wAAAAAAAP////8AAA==")
 }]
 blend_shape_mode = 0
 
@@ -20,16 +20,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_003"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
-"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 255, 255, 127, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 0, 0, 0, 0, 255, 127, 255, 127, 255, 127, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 255, 0, 0, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 127, 0, 0, 255, 127, 255, 127, 255, 127, 0, 0),
+"attribute_data": PackedByteArray("AAD/f/9//3//f/9/////f/9//38AAP9///8AAAAA/3//f/9//38AAP9/AAD/f///AAAAAAAA/38AAAAAAAAAAAAA////fwAA/3//f/9/AAA="),
 "format": 34896613399,
 "index_count": 30,
-"index_data": PackedByteArray(1, 0, 6, 0, 3, 0, 1, 0, 9, 0, 6, 0, 7, 0, 10, 0, 4, 0, 7, 0, 15, 0, 10, 0, 16, 0, 18, 0, 11, 0, 16, 0, 13, 0, 18, 0, 0, 0, 17, 0, 8, 0, 0, 0, 14, 0, 17, 0, 5, 0, 19, 0, 2, 0, 5, 0, 12, 0, 19, 0),
+"index_data": PackedByteArray("AQAGAAMAAQAJAAYABwAKAAQABwAPAAoAEAASAAsAEAANABIAAAARAAgAAAAOABEABQATAAIABQAMABMA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 20,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 255, 255, 255, 255, 0, 0, 254, 255, 84, 213, 254, 255, 0, 0, 0, 0, 255, 191, 254, 255, 0, 0, 0, 0, 255, 127, 254, 255, 0, 0, 0, 0, 84, 213, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 84, 213, 255, 255, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 255, 191, 254, 255, 255, 255, 0, 0, 84, 213, 254, 255, 255, 255, 0, 0, 255, 127, 0, 0, 255, 255, 255, 255, 84, 213, 0, 0, 255, 255, 255, 255, 255, 255, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255)
+"vertex_data": PackedByteArray("AAAAAAAA/38AAAAAAABU1QAAAAD/////AAAAAP//VNX//wAA/v//v///AAD+//////8AAP7/VNX+/wAAAAD/v/7/AAAAAP9//v8AAAAAVNX//////v//v//////+/1TV//////7///8AAP//AABU1QAA//8AAP9//v///wAA/7/+////AABU1f7///8AAP9/AAD/////VNUAAP////////9///+qqqqq/3///6qqqqr/f////3///6qqqqr/f////3///6qqqqr/f///qipU1f9///+qKlTV/3////9///+qKlTV/3///6oqVNX/f///")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3vjl6")
@@ -42,12 +42,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
 "format": 34896613377,
 "index_count": 12,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 6, 0, 7, 0, 4, 0, 6, 0, 5, 0, 7, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIABgAHAAQABgAFAAcA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAA//8AAP//AAD+/wAA/v8AAAAAAAD//////v8AAAAA//8AAAAA/v///wAAAAAAAP////8AAA==")
 }]
 blend_shape_mode = 0
 
@@ -55,16 +55,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_001"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
-"attribute_data": PackedByteArray(255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 0, 0, 255, 127, 0, 0, 255, 127, 255, 255, 0, 0, 255, 127, 0, 0, 255, 255, 255, 127, 255, 127),
+"attribute_data": PackedByteArray("/3//f////3///wAA/38AAP9///8AAP9/AAD///9//38="),
 "format": 34896613399,
 "index_count": 12,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 6, 0, 7, 0, 4, 0, 6, 0, 5, 0, 7, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIABgAHAAQABgAFAAcA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 254, 255, 84, 213, 254, 255, 0, 0, 0, 0, 84, 213, 255, 255, 255, 255, 254, 255, 84, 213, 0, 0, 255, 255, 0, 0, 84, 213, 254, 255, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 255, 255, 84, 213, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213)
+"vertex_data": PackedByteArray("AAAAAAAAVNUAAAAA//9U1f//AAD+/1TV/v8AAAAAVNX//////v9U1QAA//8AAFTV/v///wAAVNUAAP////9U1aqqqqqqqqqqqqqqqqqqqqqqKlTVqipU1aoqVNWqKlTV")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_51qqi")
@@ -77,12 +77,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
 "format": 34896613377,
 "index_count": 24,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 6, 0, 7, 0, 4, 0, 6, 0, 5, 0, 7, 0, 0, 0, 6, 0, 3, 0, 0, 0, 5, 0, 6, 0, 2, 0, 7, 0, 1, 0, 2, 0, 4, 0, 7, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIABgAHAAQABgAFAAcAAAAGAAMAAAAFAAYAAgAHAAEAAgAEAAcA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAA//8AAP//AAD+/wAA/v8AAAAAAAD//////v8AAAAA//8AAAAA/v///wAAAAAAAP////8AAA==")
 }]
 blend_shape_mode = 0
 
@@ -90,16 +90,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_006"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
-"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 255, 255, 127, 0, 0, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 0, 0, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 255, 255, 255, 127, 0, 0, 255, 127, 255, 127, 255, 127, 0, 0),
+"attribute_data": PackedByteArray("AAD/f/9//3//f/9/////fwAA/3///wAA/3//f/9/AAD/f///AAAAAAAA/38AAAAAAAD///9/AAD/f/9//38AAA=="),
 "format": 34896613399,
 "index_count": 24,
-"index_data": PackedByteArray(1, 0, 5, 0, 3, 0, 1, 0, 7, 0, 5, 0, 12, 0, 14, 0, 8, 0, 12, 0, 10, 0, 14, 0, 0, 0, 13, 0, 6, 0, 0, 0, 11, 0, 13, 0, 4, 0, 15, 0, 2, 0, 4, 0, 9, 0, 15, 0),
+"index_data": PackedByteArray("AQAFAAMAAQAHAAUADAAOAAgADAAKAA4AAAANAAYAAAALAA0ABAAPAAIABAAJAA8A"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 16,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 254, 255, 255, 255, 255, 255, 0, 0, 254, 255, 84, 213, 254, 255, 0, 0, 0, 0, 255, 127, 254, 255, 0, 0, 0, 0, 84, 213, 255, 255, 255, 255, 254, 255, 84, 213, 255, 255, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 84, 213, 254, 255, 255, 255, 0, 0, 255, 127, 0, 0, 255, 255, 255, 255, 84, 213, 0, 0, 255, 255, 255, 255, 255, 255, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 170, 170, 170, 170, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255)
+"vertex_data": PackedByteArray("AAAAAAAA/38AAAAAAABU1QAAAAD/////AAAAAP//VNX//wAA/v//////AAD+/1TV/v8AAAAA/3/+/wAAAABU1f/////+/1TV//////7///8AAP//AABU1QAA//8AAP9//v///wAAVNX+////AAD/fwAA/////1TVAAD/////////f///qqqqqv9///+qqqqq/3///6qqqqr/f///qqqqqqoqVNX/f///qipU1f9///+qKlTV/3///6oqVNX/f///")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vvb51")
@@ -112,12 +112,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
 "format": 34896613377,
 "index_count": 18,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 6, 0, 7, 0, 4, 0, 6, 0, 5, 0, 7, 0, 0, 0, 6, 0, 3, 0, 0, 0, 5, 0, 6, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIABgAHAAQABgAFAAcAAAAGAAMAAAAFAAYA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAA//8AAP//AAD+/wAA/v8AAAAAAAD//////v8AAAAA//8AAAAA/v///wAAAAAAAP////8AAA==")
 }]
 blend_shape_mode = 0
 
@@ -125,16 +125,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_007"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
-"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 255, 255, 255, 127, 0, 0, 255, 127, 255, 127),
+"attribute_data": PackedByteArray("AAD/f/9//3////9///8AAP9//3//fwAA/3///wAA/38AAAAAAAD///9/AAD/f/9/"),
 "format": 34896613399,
 "index_count": 18,
-"index_data": PackedByteArray(1, 0, 3, 0, 2, 0, 1, 0, 5, 0, 3, 0, 9, 0, 11, 0, 6, 0, 9, 0, 7, 0, 11, 0, 0, 0, 10, 0, 4, 0, 0, 0, 8, 0, 10, 0),
+"index_data": PackedByteArray("AQADAAIAAQAFAAMACQALAAYACQAHAAsAAAAKAAQAAAAIAAoA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 12,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 254, 255, 84, 213, 254, 255, 0, 0, 0, 0, 255, 127, 254, 255, 0, 0, 0, 0, 84, 213, 255, 255, 255, 255, 254, 255, 84, 213, 0, 0, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 84, 213, 254, 255, 255, 255, 0, 0, 255, 127, 0, 0, 255, 255, 255, 255, 84, 213, 255, 127, 255, 255, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 255, 127, 255, 255, 170, 170, 170, 170, 170, 42, 84, 213, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213)
+"vertex_data": PackedByteArray("AAAAAAAA/38AAAAAAABU1QAAAAD//1TV//8AAP7/VNX+/wAAAAD/f/7/AAAAAFTV//////7/VNUAAP//AABU1QAA//8AAP9//v///wAAVNX+////AAD/fwAA/////1TV/3///6qqqqqqqqqqqqqqqv9///+qqqqqqipU1aoqVNX/f///qipU1f9///+qKlTV")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wf2ek")
@@ -147,12 +147,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
 "format": 34896613377,
 "index_count": 24,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 3, 0, 4, 0, 2, 0, 3, 0, 6, 0, 4, 0, 6, 0, 7, 0, 4, 0, 6, 0, 5, 0, 7, 0, 0, 0, 6, 0, 3, 0, 0, 0, 5, 0, 6, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIAAwAEAAIAAwAGAAQABgAHAAQABgAFAAcAAAAGAAMAAAAFAAYA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAA//8AAP//AAD+/wAA/v8AAAAAAAD//////v8AAAAA//8AAAAA/v///wAAAAAAAP////8AAA==")
 }]
 blend_shape_mode = 0
 
@@ -160,16 +160,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_008"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
-"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 255, 255, 255, 127, 255, 127, 255, 127, 255, 255, 0, 0, 0, 0, 255, 127, 255, 127, 255, 127, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 255, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 127, 0, 0, 255, 127, 255, 127),
+"attribute_data": PackedByteArray("AAD/f/9//3////9//3//f///AAAAAP9//3//f/9/AAD/fwAA/3///wAA/38AAAAAAAAAAAAA////fwAA/3//fw=="),
 "format": 34896613399,
 "index_count": 24,
-"index_data": PackedByteArray(1, 0, 4, 0, 2, 0, 1, 0, 7, 0, 4, 0, 5, 0, 8, 0, 3, 0, 5, 0, 12, 0, 8, 0, 13, 0, 15, 0, 9, 0, 13, 0, 10, 0, 15, 0, 0, 0, 14, 0, 6, 0, 0, 0, 11, 0, 14, 0),
+"index_data": PackedByteArray("AQAEAAIAAQAHAAQABQAIAAMABQAMAAgADQAPAAkADQAKAA8AAAAOAAYAAAALAA4A"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 16,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 84, 213, 254, 255, 0, 0, 0, 0, 255, 191, 254, 255, 0, 0, 0, 0, 255, 127, 254, 255, 0, 0, 0, 0, 84, 213, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 84, 213, 0, 0, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 255, 191, 254, 255, 255, 255, 0, 0, 84, 213, 254, 255, 255, 255, 0, 0, 255, 127, 0, 0, 255, 255, 255, 255, 84, 213, 255, 127, 255, 255, 170, 170, 170, 170, 170, 170, 170, 170, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 170, 42, 84, 213, 170, 42, 84, 213, 255, 127, 255, 255, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213)
+"vertex_data": PackedByteArray("AAAAAAAA/38AAAAAAABU1QAAAAD//1TV//8AAP7//7///wAA/v9U1f7/AAAAAP+//v8AAAAA/3/+/wAAAABU1f/////+//+///////7/VNUAAP//AABU1QAA//8AAP9//v///wAA/7/+////AABU1f7///8AAP9/AAD/////VNX/f///qqqqqqqqqqr/f///qqqqqv9/////f///qqqqqv9///+qKlTVqipU1f9/////f///qipU1f9///+qKlTV")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_eb1li")
@@ -182,12 +182,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
 "format": 34896613377,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAA//8AAP//AAD//wAA/v8AAAAAAAA=")
 }]
 blend_shape_mode = 0
 
@@ -195,16 +195,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_009"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
-"attribute_data": PackedByteArray(255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 0, 0, 255, 127, 0, 0),
+"attribute_data": PackedByteArray("/3//f////3///wAA/38AAA=="),
 "format": 34896613399,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 255, 255, 84, 213, 254, 255, 0, 0, 0, 0, 84, 213, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170)
+"vertex_data": PackedByteArray("AAAAAAAAVNUAAAAA//9U1f//AAD//1TV/v8AAAAAVNWqqqqqqqqqqqqqqqqqqqqq")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_efyvx")
@@ -217,12 +217,12 @@ _surfaces = [{
 "aabb": AABB(-1, 2, -1, 2.00001, 1.00136e-05, 2.00001),
 "format": 34896613377,
 "index_count": 6,
-"index_data": PackedByteArray(2, 0, 3, 0, 0, 0, 2, 0, 1, 0, 3, 0),
+"index_data": PackedByteArray("AgADAAAAAgABAAMA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(254, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0)
+"vertex_data": PackedByteArray("/v8AAP7/AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP7/AAA=")
 }]
 blend_shape_mode = 0
 
@@ -230,16 +230,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_010"
 _surfaces = [{
 "aabb": AABB(-1, 2, -1, 2.00001, 1.00136e-05, 2.00001),
-"attribute_data": PackedByteArray(255, 127, 255, 255, 0, 0, 255, 127, 0, 0, 255, 255, 255, 127, 255, 127),
+"attribute_data": PackedByteArray("/3///wAA/38AAP///3//fw=="),
 "format": 34896613399,
 "index_count": 6,
-"index_data": PackedByteArray(2, 0, 3, 0, 0, 0, 2, 0, 1, 0, 3, 0),
+"index_data": PackedByteArray("AgADAAAAAgABAAMA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(254, 255, 0, 0, 254, 255, 84, 213, 0, 0, 0, 0, 0, 0, 84, 213, 254, 255, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 254, 255, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213)
+"vertex_data": PackedByteArray("/v8AAP7/VNUAAAAAAABU1f7/AAAAAFTVAAAAAP7/VNWqKlTVqipU1aoqVNWqKlTV")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ca2jy")
@@ -252,12 +252,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
 "format": 34896613377,
 "index_count": 12,
-"index_data": PackedByteArray(4, 0, 5, 0, 2, 0, 4, 0, 3, 0, 5, 0, 0, 0, 4, 0, 1, 0, 0, 0, 3, 0, 4, 0),
+"index_data": PackedByteArray("BAAFAAIABAADAAUAAAAEAAEAAAADAAQA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 6,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAD+/wAAAAAAAP/////+/wAAAAD//wAAAAD+////AAAAAAAA/////wAA")
 }]
 blend_shape_mode = 0
 
@@ -265,16 +265,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_011"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
-"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 255, 127, 255, 255, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 255, 255, 255, 127, 0, 0, 255, 127, 255, 127),
+"attribute_data": PackedByteArray("AAD/f/9//3//f///AAD/fwAAAAAAAP///38AAP9//38="),
 "format": 34896613399,
 "index_count": 12,
-"index_data": PackedByteArray(5, 0, 7, 0, 2, 0, 5, 0, 3, 0, 7, 0, 0, 0, 6, 0, 1, 0, 0, 0, 4, 0, 6, 0),
+"index_data": PackedByteArray("BQAHAAIABQADAAcAAAAGAAEAAAAEAAYA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 127, 254, 255, 0, 0, 0, 0, 255, 127, 255, 255, 255, 255, 254, 255, 84, 213, 0, 0, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 84, 213, 254, 255, 255, 255, 0, 0, 255, 127, 0, 0, 255, 255, 255, 255, 84, 213, 255, 127, 255, 255, 255, 127, 255, 255, 170, 42, 84, 213, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213)
+"vertex_data": PackedByteArray("AAAAAAAA/3/+/wAAAAD/f//////+/1TVAAD//wAAVNUAAP//AAD/f/7///8AAFTV/v///wAA/38AAP////9U1f9/////f///qipU1aoqVNX/f///qipU1f9///+qKlTV")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bobb7")
@@ -287,12 +287,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 1.01924e-05),
 "format": 34896613377,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 125, 4, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 125, 4, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAH0EAAD//wAAAAAAAAAA//99BAAA/////wAAAAA=")
 }]
 blend_shape_mode = 0
 
@@ -300,16 +300,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_012"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 1.01924e-05),
-"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 0, 0, 0, 0, 255, 127, 0, 0),
+"attribute_data": PackedByteArray("AAD/f/9//38AAAAA/38AAA=="),
 "format": 34896613399,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 125, 4, 255, 127, 255, 255, 0, 0, 0, 0, 255, 127, 0, 0, 255, 255, 125, 4, 255, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+"vertex_data": PackedByteArray("AAAAAH0E/3///wAAAAD/fwAA//99BP9//////wAA/3//f////3////9/////f///")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_exng4")
@@ -322,12 +322,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
 "format": 34896613377,
 "index_count": 12,
-"index_data": PackedByteArray(2, 0, 3, 0, 1, 0, 2, 0, 5, 0, 3, 0, 0, 0, 5, 0, 2, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("AgADAAEAAgAFAAMAAAAFAAIAAAAEAAUA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 6,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAD//wAA//8AAP7/AAAAAAAA////////AAAAAP//AAAAAP7///8AAAAA")
 }]
 blend_shape_mode = 0
 
@@ -335,16 +335,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_013"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
-"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 0, 0, 255, 127, 255, 127, 255, 127, 255, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 127, 0, 0),
+"attribute_data": PackedByteArray("AAD/f/9//38AAP9//3//f/9/AAAAAAAAAAAAAP9/AAA="),
 "format": 34896613399,
 "index_count": 12,
-"index_data": PackedByteArray(2, 0, 4, 0, 1, 0, 2, 0, 6, 0, 4, 0, 0, 0, 7, 0, 3, 0, 0, 0, 5, 0, 7, 0),
+"index_data": PackedByteArray("AgAEAAEAAgAGAAQAAAAHAAMAAAAFAAcA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 127, 255, 255, 0, 0, 255, 255, 255, 191, 254, 255, 0, 0, 0, 0, 255, 191, 254, 255, 0, 0, 0, 0, 255, 127, 255, 255, 255, 255, 255, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 255, 191, 254, 255, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+"vertex_data": PackedByteArray("AAAAAAAA/3///wAA////v/7/AAAAAP+//v8AAAAA/3//////////vwAA//8AAP9//v///wAA/7/+////AAD/f/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_daayq")
@@ -357,12 +357,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
 "format": 34896613377,
 "index_count": 18,
-"index_data": PackedByteArray(2, 0, 3, 0, 1, 0, 2, 0, 5, 0, 3, 0, 5, 0, 6, 0, 3, 0, 5, 0, 4, 0, 6, 0, 0, 0, 5, 0, 2, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("AgADAAEAAgAFAAMABQAGAAMABQAEAAYAAAAFAAIAAAAEAAUA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 7,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAD//wAA/v8AAP7/AAAAAAAA//////7/AAAAAP//AAAAAP7///8AAAAAAAD/////AAA=")
 }]
 blend_shape_mode = 0
 
@@ -370,16 +370,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_014"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
-"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 0, 0, 255, 127, 255, 127, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 127, 0, 0, 255, 127, 255, 127),
+"attribute_data": PackedByteArray("AAD/f/9//38AAP9//3//f/9/AAD/f///AAD/fwAAAAAAAAAAAAD///9/AAD/f/9/"),
 "format": 34896613399,
 "index_count": 18,
-"index_data": PackedByteArray(2, 0, 4, 0, 1, 0, 2, 0, 8, 0, 4, 0, 9, 0, 11, 0, 5, 0, 9, 0, 6, 0, 11, 0, 0, 0, 10, 0, 3, 0, 0, 0, 7, 0, 10, 0),
+"index_data": PackedByteArray("AgAEAAEAAgAIAAQACQALAAUACQAGAAsAAAAKAAMAAAAHAAoA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 12,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 127, 255, 255, 0, 0, 254, 255, 255, 191, 254, 255, 0, 0, 0, 0, 255, 191, 254, 255, 0, 0, 0, 0, 255, 127, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 84, 213, 0, 0, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 255, 191, 254, 255, 255, 255, 0, 0, 84, 213, 254, 255, 255, 255, 0, 0, 255, 127, 0, 0, 255, 255, 255, 255, 84, 213, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 170, 42, 84, 213, 170, 42, 84, 213, 255, 127, 255, 255, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 170, 42, 84, 213)
+"vertex_data": PackedByteArray("AAAAAAAA/3///wAA/v//v/7/AAAAAP+//v8AAAAA/3///////v//v//////+/1TVAAD//wAAVNUAAP//AAD/f/7///8AAP+//v///wAAVNX+////AAD/fwAA/////1TV/3////9/////f////3////9///+qKlTVqipU1f9/////f///qipU1f9///+qKlTV")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_slpax")
@@ -392,12 +392,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
 "format": 34896613377,
 "index_count": 12,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 0, 0, 5, 0, 3, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIAAAAFAAMAAAAEAAUA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 6,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAA//8AAP//AAD//wAA/v8AAAAAAAAAAP//AAAAAP7///8AAAAA")
 }]
 blend_shape_mode = 0
 
@@ -405,16 +405,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_015"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
-"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 255, 127, 0, 0, 0, 0, 0, 0, 255, 127, 0, 0),
+"attribute_data": PackedByteArray("AAD/f/9//3////9///8AAP9//3//fwAAAAAAAP9/AAA="),
 "format": 34896613399,
 "index_count": 12,
-"index_data": PackedByteArray(1, 0, 3, 0, 2, 0, 1, 0, 5, 0, 3, 0, 0, 0, 7, 0, 4, 0, 0, 0, 6, 0, 7, 0),
+"index_data": PackedByteArray("AQADAAIAAQAFAAMAAAAHAAQAAAAGAAcA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 255, 255, 84, 213, 254, 255, 0, 0, 0, 0, 255, 127, 254, 255, 0, 0, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 255, 127, 255, 255)
+"vertex_data": PackedByteArray("AAAAAAAA/38AAAAAAABU1QAAAAD//1TV//8AAP//VNX+/wAAAAD/f/7/AAAAAFTVAAD//wAA/3/+////AAD/f/9///+qqqqqqqqqqqqqqqr/f///qqqqqv9/////f///")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7mmhy")
@@ -427,12 +427,12 @@ _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
 "format": 34896613377,
 "index_count": 18,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 3, 0, 4, 0, 2, 0, 3, 0, 6, 0, 4, 0, 0, 0, 6, 0, 3, 0, 0, 0, 5, 0, 6, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIAAwAEAAIAAwAGAAQAAAAGAAMAAAAFAAYA"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 7,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAA//8AAP//AAD//wAA/v8AAAAAAAD///////8AAAAA//8AAAAA/v///wAAAAA=")
 }]
 blend_shape_mode = 0
 
@@ -440,16 +440,16 @@ blend_shape_mode = 0
 resource_name = "BasicSetNoUV_Plane_016"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 2, 2),
-"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 127, 255, 127, 255, 255, 255, 127, 255, 127, 255, 127, 255, 255, 0, 0, 0, 0, 255, 127, 255, 127, 255, 127, 255, 127, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 127, 0, 0),
+"attribute_data": PackedByteArray("AAD/f/9//3////9//3//f///AAAAAP9//3//f/9/AAD/fwAAAAAAAAAAAAD/fwAA"),
 "format": 34896613399,
 "index_count": 18,
-"index_data": PackedByteArray(1, 0, 4, 0, 2, 0, 1, 0, 7, 0, 4, 0, 5, 0, 8, 0, 3, 0, 5, 0, 10, 0, 8, 0, 0, 0, 11, 0, 6, 0, 0, 0, 9, 0, 11, 0),
+"index_data": PackedByteArray("AQAEAAIAAQAHAAQABQAIAAMABQAKAAgAAAALAAYAAAAJAAsA"),
 "material": ExtResource("1_jl3u5"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 12,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 84, 213, 254, 255, 0, 0, 0, 0, 255, 191, 254, 255, 0, 0, 0, 0, 255, 127, 254, 255, 0, 0, 0, 0, 84, 213, 255, 255, 255, 255, 255, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 255, 191, 254, 255, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 170, 170, 170, 170, 170, 170, 170, 170, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+"vertex_data": PackedByteArray("AAAAAAAA/38AAAAAAABU1QAAAAD//1TV//8AAP///7///wAA//9U1f7/AAAAAP+//v8AAAAA/3/+/wAAAABU1f////////+/AAD//wAA/3/+////AAD/v/7///8AAP9//3///6qqqqqqqqqq/3///6qqqqr/f////3///6qqqqr/f////3////9/////f///")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bppvb")

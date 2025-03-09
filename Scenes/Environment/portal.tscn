@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dlm318ya0bs05"]
 
-[ext_resource type="Shader" path="res://Scripts/portal.gdshader" id="1_wg75t"]
+[ext_resource type="Shader" uid="uid://b8v530b03fxnk" path="res://Scripts/portal.gdshader" id="1_wg75t"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6mv04"]
 
@@ -22,12 +22,12 @@ render_priority = 0
 shader = ExtResource("1_wg75t")
 shader_parameter/distortionView = 0.045
 shader_parameter/speedView = 0.5
+shader_parameter/noiseViewX = SubResource("NoiseTexture2D_urjfl")
+shader_parameter/noiseViewY = SubResource("NoiseTexture2D_ulyko")
 shader_parameter/tintColor = Color(0.760784, 0.027451, 0.592157, 1)
 shader_parameter/fesnelAmount = 0.0
 shader_parameter/distortionVertex = 0.03
 shader_parameter/speedVertex = 0.1
-shader_parameter/noiseViewX = SubResource("NoiseTexture2D_urjfl")
-shader_parameter/noiseViewY = SubResource("NoiseTexture2D_ulyko")
 shader_parameter/noiseVertex = SubResource("NoiseTexture2D_h64di")
 
 [sub_resource type="SphereMesh" id="SphereMesh_2m16h"]
@@ -58,7 +58,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hyq4u"]
 _data = {
-"pulse": SubResource("Animation_ssgc1")
+&"pulse": SubResource("Animation_ssgc1")
 }
 
 [node name="Portal" type="Node3D"]

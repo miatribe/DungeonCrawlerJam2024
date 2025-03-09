@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://csxpt1p66ouf1"]
 
-[ext_resource type="Script" path="res://Scripts/dialog_close_button.gd" id="1_cv50f"]
+[ext_resource type="Script" uid="uid://g45f5eqwrm4g" path="res://Scripts/dialog_close_button.gd" id="1_cv50f"]
 
 [node name="DialogCloseButton" type="Button"]
 offset_right = 124.0
