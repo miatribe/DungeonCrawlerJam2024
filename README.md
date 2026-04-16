@@ -3,3 +3,6 @@
 The jam entry has been submitted, you can play the game https://miatribe.itch.io/shrineofthefox
 
 Not having sounds and a lack of feedback with the actions/skills is the downfall for this one.
+
+<img width="315" height="250" alt="image" src="https://github.com/user-attachments/assets/e71c8893-370a-4953-825d-620822cbad46" />
+
